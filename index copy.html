@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    margin: 0;
+  }
+
+  section {
+    height: 100vh;
+  }
+
+  .block1 {
+    background: url(./src/assets/img/2.jpg) center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .block2 {
+    background: url(./src/assets/img/3.jpg) center;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .transparency {
+    height: 60vh;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    font-size: 100px;
+    color: #fff;
+    background-color: #1E1E1E;
+  }
+</style>
+
+<body>
+  <main>
+    <section class="block1">
+      <div class="card">
+        <p>1</p>
+      </div>
+      <div class="transparency"></div>
+      <div class="card">
+        <p>2</p>
+      </div>
+    </section>
+    <section class="block2">
+      <div class="card">
+        <p>3</p>
+      </div>
+      <div class="transparency"></div>
+      <div class="card">
+        <p>4</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
