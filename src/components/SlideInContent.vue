@@ -34,6 +34,7 @@ onMounted(() => {
 
 <style scoped lang="less">
 .slide-up {
+  width: 100%;
   opacity: 0; /* 初始透明度 */
   transform: translateY(130px); /* 初始位置为向下偏移 */
   transition: opacity 1s ease, transform 1s ease; /* 动画效果 */
