@@ -8,6 +8,7 @@ import AlphaFund from "./AlphaFund.vue";
 import Media from "./Media.vue";
 import Market from "./Market.vue";
 import Social from "./Social.vue";
+import AboutUs from "./AboutUs.vue";
 // 将全局组件封装到插件中
 export default {
   install(Vue: App) {
@@ -19,5 +20,7 @@ export default {
     Vue.component("Media", Media);
     Vue.component("Market", Market);
     Vue.component("Social", Social);
+    Vue.component("AboutUs", AboutUs);
+
   },
 };
