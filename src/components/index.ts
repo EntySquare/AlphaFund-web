@@ -8,9 +8,11 @@ import AlphaFund from "./AlphaFund.vue";
 import Media from "./Media.vue";
 import Market from "./Market.vue";
 import Social from "./Social.vue";
+import Investing from "./Investing.vue";
 // 将全局组件封装到插件中
 export default {
   install(Vue: App) {
+    Vue.component("Investing", Investing);
     Vue.component("LINE", line);
     Vue.component("SlideInContent", SlideInContent);
     Vue.component("Zoom", Zoom);
@@ -19,5 +21,7 @@ export default {
     Vue.component("Media", Media);
     Vue.component("Market", Market);
     Vue.component("Social", Social);
+
+
   },
 };

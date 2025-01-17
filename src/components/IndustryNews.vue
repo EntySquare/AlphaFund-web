@@ -108,4 +108,76 @@
     background: #000000;
   }
 }
+
+@media (max-width: 1420px) {
+  .container {
+    padding: 100px 100px 200px 100px;
+  }
+}
+@media (max-width: 1380px) {
+  .container {
+    padding: 100px 60px 200px 60px;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    .News {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      row-gap: 80px;
+    }
+  }
+}
+@media (max-width: 824px) {
+  .IndustryNews {
+    .container {
+      padding: 50px 20px 100px 20px;
+
+      .title {
+        font-size: 25px;
+        margin-bottom: 30px;
+      }
+      .News {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 100px;
+        row-gap: 30px;
+
+        .NewsItem {
+          gap: 15px;
+          .itemImg {
+            max-width: 320px;
+            height: auto;
+          }
+          .itemtext {
+            font-size: 14px;
+            text-align: center;
+            max-width: 320px;
+          }
+        }
+      }
+      .Open {
+        padding: 30px 0;
+        border-radius: 21px;
+        .openTitle {
+          font-size: 30px;
+          line-height: 40px;
+        }
+        .openText {
+          font-family: PingFang SC;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          margin-top: 15px;
+          margin-bottom: 40px;
+        }
+        .openButton {
+          padding: 10px 30px;
+          font-size: 14px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
 </style>

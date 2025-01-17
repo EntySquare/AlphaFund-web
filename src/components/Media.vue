@@ -95,6 +95,49 @@ const teamMembers = ref([
     }
   }
 }
+
+@media (max-width: 1420px) {
+  .Media {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1380px) {
+  .Media {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 824px) {
+  .Media {
+    padding: 0 20px;
+  }
+  .container {
+    padding: 50px 0;
+  }
+  .title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .Media_Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    row-gap: 20px;
+    .item {
+      .itemimage {
+        width: 320px;
+
+        margin-bottom: 15px;
+      }
+      .itemname {
+        max-width: 320px;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+      }
+    }
+  }
+}
 </style>
   
   
