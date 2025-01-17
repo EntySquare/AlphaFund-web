@@ -1,8 +1,11 @@
-<script setup lang='ts' name="HomeView"></script>
+<script setup lang='ts' name="HomeView">
+
+</script>
 <template>
   <div class="home_view">
     <SlideInContent> <Investing /></SlideInContent>
     <div class="container">
+      <SlideInContent> <AboutUs /></SlideInContent>
       <SlideInContent> <Market /></SlideInContent>
       <SlideInContent> <Social /></SlideInContent>
       <SlideInContent> <Media /></SlideInContent>
