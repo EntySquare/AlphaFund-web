@@ -234,7 +234,7 @@ const getItemStyle = (index: number) => {
     padding: 0px 60px;
     .container1 {
       .left-side {
-        gap: 110px;
+        gap: 100px;
       }
       .nav-items {
         gap: 110px;
@@ -242,11 +242,11 @@ const getItemStyle = (index: number) => {
     }
   }
 }
-@media (max-width: 1150px) {
+@media (max-width: 1154px) {
   .navbar-inner {
     .container1 {
       .left-side {
-        gap: 80px;
+        gap: 70px;
       }
       .nav-items {
         gap: 80px;
@@ -254,14 +254,14 @@ const getItemStyle = (index: number) => {
     }
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1002px) {
   .navbar-inner {
     .container1 {
       .left-side {
-        gap: 45px;
+        gap: 40px;
       }
       .nav-items {
-        gap: 45px;
+        gap: 40px;
       }
     }
   }

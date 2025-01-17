@@ -99,13 +99,13 @@ const { windowWidth } = useWindowSize();
     font-weight: 400;
     line-height: 19.6px;
     color: #fffffb;
-    margin-bottom: 50px;
-    max-width: 253px;
+    margin-bottom: 65px;
+    max-width: 290px;
   }
   .stats {
     display: flex;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
   }
   .avatar {
     width: 100px;
@@ -143,7 +143,7 @@ const { windowWidth } = useWindowSize();
     line-height: 21px;
     color: #fff;
     padding: 12px 40px;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     border-radius: 4px;
   }
   .footer-text {

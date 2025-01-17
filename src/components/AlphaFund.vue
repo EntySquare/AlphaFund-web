@@ -86,6 +86,12 @@ const teamMembers = ref([
     flex-direction: column;
     align-items: center;
     padding: 55px 50px 59px 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    }
     .itemimage {
       width: 270px;
       height: 270px;

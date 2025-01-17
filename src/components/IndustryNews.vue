@@ -7,13 +7,28 @@
       <div class="title">Industry News</div>
       <div class="News">
         <div class="NewsItem" v-for="(item, index) in 3" :key="index">
-          <div class="itemImg">
+          <LINE lineWidth="810px">
+            <template #image>
+              <div class="itemImg">
+                <img src="@/assets/img/Industry1.png" alt="" />
+              </div>
+            </template>
+            <!-- 文字插槽 -->
+            <template #text>
+              <div class="itemtext">
+                <span class="Research">Research:</span>
+                The Far-Reaching Impact of Generative AI on Global Financial
+                Markets
+              </div>
+            </template>
+          </LINE>
+          <!-- <div class="itemImg">
             <img src="@/assets/img/Industry1.png" alt="" />
           </div>
           <div class="itemtext">
             <span class="Research">Research:</span>
             The Far-Reaching Impact of Generative AI on Global Financial Markets
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="Open">
@@ -53,12 +68,13 @@
   .NewsItem {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    // gap: 30px;
     .itemImg {
       width: 360px;
       height: auto;
     }
     .itemtext {
+      margin-top: 30px;
       font-family: PingFang SC;
       font-size: 20px;
       font-weight: 400;
@@ -144,12 +160,14 @@
         row-gap: 30px;
 
         .NewsItem {
-          gap: 15px;
+          // gap: 15px;
           .itemImg {
             max-width: 320px;
             height: auto;
           }
           .itemtext {
+            margin-top: 15px;
+
             font-size: 14px;
             text-align: center;
             max-width: 320px;
