@@ -6,8 +6,17 @@
       <div class="title">Market Insights</div>
       <div class="Market_Content">
         <div v-for="(member, index) in teamMembers" :key="index" class="item">
-          <img :src="member.image" class="itemimage" />
-          <div class="itemname" v-html="member.title"></div>
+          <LINE lineWidth="810px">
+            <template #image>
+              <img :src="member.image" class="itemimage" />
+            </template>
+            <!-- 文字插槽 -->
+            <template #text>
+              <div class="itemname" v-html="member.title"></div>
+            </template>
+          </LINE>
+          <!-- <img :src="member.image" class="itemimage" />
+          <div class="itemname" v-html="member.title"></div> -->
         </div>
       </div>
     </div>
@@ -79,12 +88,13 @@ const teamMembers = ref([
   gap: 50px;
   row-gap: 80px;
   .item {
+    cursor: pointer;
     .itemimage {
       width: 360px;
       height: auto;
-      margin-bottom: 30px;
     }
     .itemname {
+      margin-top: 30px;
       max-width: 360px;
       font-family: PingFang SC;
       font-size: 20px;
@@ -92,6 +102,49 @@ const teamMembers = ref([
       line-height: 28px;
       text-align: left;
       color: #000;
+    }
+  }
+}
+
+@media (max-width: 1420px) {
+  .Market {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1380px) {
+  .Market {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 824px) {
+  .Market {
+    padding: 0 20px;
+  }
+  .container {
+    padding: 50px 0;
+  }
+  .title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .Market_Content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    row-gap: 20px;
+    .item {
+      .itemimage {
+        width: 320px;
+      }
+      .itemname {
+        margin-top: 15px;
+        max-width: 320px;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+      }
     }
   }
 }

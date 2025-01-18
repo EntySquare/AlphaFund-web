@@ -86,6 +86,12 @@ const teamMembers = ref([
     flex-direction: column;
     align-items: center;
     padding: 55px 50px 59px 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    }
     .itemimage {
       width: 270px;
       height: 270px;
@@ -109,6 +115,53 @@ const teamMembers = ref([
       line-height: 28px;
       text-align: center;
       color: #414141;
+    }
+  }
+}
+
+@media (max-width: 1420px) {
+  .AlphaFund {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1380px) {
+  .AlphaFund {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 824px) {
+  .AlphaFund {
+    padding: 0 20px;
+  }
+  .container {
+    padding: 50px 0;
+    width: 100%;
+  }
+  .title {
+    font-size: 25px;
+    margin-bottom: 30px;
+  }
+  .AlphaFund_Content {
+    gap: 14px;
+    row-gap: 15px;
+    .item {
+      border-radius: 20px;
+      width: 100%;
+
+      padding: 20px 25px 30px 20px;
+      .itemimage {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 0px;
+      }
+      .itemname {
+        font-size: 16px;
+        margin-bottom: 0px;
+      }
+      .itemposition {
+        max-width: 100%;
+        font-size: 14px;
+      }
     }
   }
 }

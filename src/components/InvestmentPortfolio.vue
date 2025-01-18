@@ -1,7 +1,7 @@
 <template>
     <div class="InvestmentPortfolio">
       <div class="container">
-        <!-- Investment Portfolio Section -->
+
         <div class="title">Investment Portfolio</div>
     
             <div class="content_text">
@@ -28,7 +28,7 @@
     </ul>
             </div>
     <div class="right_content">
-      <!-- Pie chart image -->
+    
       <div class="pie-chart">
         <img src="/src/assets/img/pieChart.png" alt="Pie Chart" />
         <div class="rectangles">
@@ -51,17 +51,15 @@
           <div class="percentage-box">20%</div>
           <div class="label">Educational Technology</div>
         </div>
-          </div>
-         
         <div class="rectangular-box-ai">
           <div class="percentage-box">50%</div>
           <div class="label">Artificial Intelligence (AI)</div>
+          </div>
+         
+       
   
       </div>
       </div>
-    
-  
-    
     </div>
     </div>
         </div>      
@@ -340,6 +338,229 @@ const InvestmentPortfolioContent = ref([
   color: #414141;
 }
     }
+}
+
+@media (max-width: 1420px) {
+  .InvestmentPortfolio {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1380px) {
+  .InvestmentPortfolio {
+    padding: 0 60px;
+  }
+}
+@media (max-width: 824px) {
+  .InvestmentPortfolio {
+    padding: 0 20px;
+    .container {
+      padding: 50px 0;
+    }
+    .title {
+      font-size: 25px;
+      margin-bottom: 100px;
+    }
+      .content_text {
+        font-size: 16px;
+        line-height: 24.2px;
+        padding-bottom: 00px;
+        margin-bottom: 30px;
+        text-align: start;
+        padding: 0px;
+      }
+    .InvestmentPortfolio_Cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 0px;
+      row-gap: 20px;
+   
+      .item {
+        width: 100%;
+        height: 10%;
+        border-radius: 14px;
+        border: 1px solid #e4e4e4;
+        background: linear-gradient(to bottom, white 1%, #F6F6F6 99%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 20px 25px 20px;
+
+        .itemimage {
+          width: 70px;
+          height:70px;
+          margin: 20px 0px;
+        }
+        .itemtitle {
+          font-size: 20px;
+          line-height: 22px;
+          margin-bottom: 0;
+        }
+        .itemcontent {
+          padding-top: 0px;
+          font-size: 14px;
+          max-width: 100%;
+          line-height: 20.8px;
+        }
+      }
+    }
+    .Energy_Container{
+      width: 100%;
+      display: flex;
+      flex: column;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      margin-bottom: 200px;
+    .left_content{
+        width: 100%;
+        display: flex;
+        text-align: center;
+        flex-direction: column; 
+        padding-left: 20px;
+       // background-color: #000;
+      ul {
+        list-style-type: none;
+        display: flex;
+        text-align: center;
+        flex-direction: column; 
+        justify-content: center;
+      }
+      li {
+        font-family: PingFang SC;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+        color: #414141;
+        margin-bottom: 50px;
+      }
+    }
+
+.right_content{
+  width: 100%;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    flex-direction: column; 
+     position: relative;
+    
+.pie-chart {
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+
+.pie-chart img {
+    width: 500px;
+     height: 500px;
+    justify-content: center;
+     z-index: 3;
+}
+
+.rectangles {
+  width: 100%;
+  height: 100%;
+}
+
+.rectangular-box-energy {
+    width: 120px;
+    height: 70px;
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #CFCFCF;
+    font-family: PingFang SC;
+    background-color: white;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    top:  60px;
+    left:  80px;
+    z-index: 4;
+ 
+}
+
+.rectangular-box-tech {
+  width: 120px;
+  height: 70px;
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #CFCFCF;
+    font-family: PingFang SC;
+    background-color: white;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    top:  60px;
+    right: 60px;
+    z-index: 4;
+}
+
+.rectangular-box-ai {
+  width: 120px;
+  height: 70px;
+    display: flex;
+    border-radius: 3px;
+    border: 1px solid #CFCFCF;
+    font-family: PingFang SC;
+    background-color: white;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    bottom: 00px;
+    right: 270px;
+    z-index: 4;
+}
+
+.leftRectangle{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    bottom: 330px;
+    left: 115px;
+    z-index: 2;
+    
+}
+
+.rightRectangle{
+   width: 100px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    bottom: 330px;
+    right: 120px;
+    z-index: 2;
+
+    
+}
+.downRectangle{
+    width: 20px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    bottom: 58px;
+    right:  340px;
+    z-index: 2;
+    
+}
+
+.percentage-box {
+  font-size: 16px;
+  font-weight: 700;
+  color: #414141;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #414141;
+}
+    }
+}
+  }
 }
 
 </style>

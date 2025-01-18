@@ -10,10 +10,11 @@ import Market from "./Market.vue";
 import Social from "./Social.vue";
 import AboutUs from "./AboutUs.vue";
 import InvestmentPortfolio from "./InvestmentPortfolio.vue";
-
+import Investing from "./Investing.vue";
 // 将全局组件封装到插件中
 export default {
   install(Vue: App) {
+    Vue.component("Investing", Investing);
     Vue.component("LINE", line);
     Vue.component("SlideInContent", SlideInContent);
     Vue.component("Zoom", Zoom);
