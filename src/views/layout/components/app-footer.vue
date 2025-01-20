@@ -12,6 +12,60 @@ const { windowWidth } = useWindowSize();
             <img src="@/assets/img/logo.svg" alt="BeWater" />
           </div>
           <div class="text" v-if="windowWidth > 824">
+            To provide investors with stable returns，<br />
+            Help them achieve long-term financial goals.
+          </div>
+          <div class="text" v-else>
+            To provide investors with stable returns， Help them achieve long-term financial goals.
+          </div>
+          <div class="Links">
+            <img src="@/assets/img/in.png" alt="" />
+            <img src="@/assets/img/twi.png" alt="" />
+            <img src="@/assets/img/facebook.png" alt="" />
+          </div>
+        </div>
+        <div class="top_right">
+          <div class="navSpecial">
+            <div class="nav">
+              <div class="navTitle">Contact</div>
+              <div class="navText">+123-456-7890</div>
+              <div class="navText">info@alphafund.com</div>
+              <div class="navText">Online Contact Form</div>
+            </div>
+            <div class="nav">
+              <div class="navTitle">Address</div>
+              <div class="navText">公司地址</div>
+            </div>
+          </div>
+          <div class="nav">
+            <div class="navTitle">Explore</div>
+            <div class="navText">Home</div>
+            <div class="navText">About us</div>
+            <div class="navText">Investment Portfolio</div>
+            <div class="navText">Market Insights</div>
+            <div class="navText">Social Impact</div>
+            <div class="navText">Media Coverage</div>
+            <div class="navText">Brilliance Corporation</div>
+          </div>
+          <div class="nav">
+            <div class="navTitle">Support</div>
+            <div class="navText">Legal Notice</div>
+            <div class="navText">Privacy Policy</div>
+            <div class="navText">Term of service</div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom">版权信息：© 2023 AlphaFund. All rights reserved.</div>
+    </div>
+  </footer>
+  <!-- <footer class="app_footer">
+    <div class="container">
+      <div class="top">
+        <div class="top_left">
+          <div class="logo">
+            <img src="@/assets/img/logo.svg" alt="BeWater" />
+          </div>
+          <div class="text" v-if="windowWidth > 824">
             为投资者提供稳健的回报，<br />
             帮助他们实现长期财务目标。
           </div>
@@ -55,7 +109,7 @@ const { windowWidth } = useWindowSize();
       </div>
       <div class="bottom">版权信息：© 2023 AlphaFund. All rights reserved.</div>
     </div>
-  </footer>
+  </footer> -->
 </template>
 
 <style scoped lang="less">
@@ -109,7 +163,7 @@ const { windowWidth } = useWindowSize();
   }
   .top_right {
     display: flex;
-    gap: 140px;
+    gap: 90px;
     .navSpecial {
       display: flex;
       flex-direction: column;
