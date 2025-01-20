@@ -3,9 +3,9 @@
     <img
       v-if="windowWidth > 824"
       alt=""
-      src="@/assets/img/OpenBg.png"
+      src="@/assets/img/homeBanner.png"
       loading="lazy"
-      style="position: relative; width: 100%; height: auto"
+      class="full-screen-image"
     />
     <div class="container">
       <div class="content">
@@ -42,21 +42,27 @@
     </div>
   </div>
 </template>
-  
-  <script lang="ts" setup>
+
+<script lang="ts" setup>
 import { useWindowSize } from "@/utils/useWindowSize";
 
 const { windowWidth } = useWindowSize();
 </script>
-  
-  <style scoped lang="less">
+
+<style scoped lang="less">
+.full-screen-image {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 98vh;
+  object-fit: cover;
+}
+
 .Investing {
   /* position: relative; */
   /* background: url("@/assets/img/OpenBg.png") no-repeat; */
   background-size: cover;
-
   height: 735px;
-
   display: flex;
   width: 100%;
   justify-content: center;
@@ -70,37 +76,41 @@ const { windowWidth } = useWindowSize();
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 0 120px;
 }
 .content {
   height: 100%;
   width: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   .inText {
-    font-family: PingFang SC;
-    font-size: 15px;
-    font-weight: 400;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
     line-height: 19.6px;
-
+    font-size: 4rem;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
     text-align: left;
-    color: #fffffb;
+    color: #272f38;
   }
   .intextMargin {
     margin-bottom: 40px;
   }
   .AtText {
-    font-family: PingFang SC;
-    font-size: 15px;
-    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
     line-height: 19.6px;
     color: #fffffb;
     margin-bottom: 65px;
-    max-width: 290px;
+    max-width: 500px;
+    font-size: 1.5rem;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+    text-align: left;
+    color: #272f38;
   }
   .stats {
     display: flex;
@@ -108,50 +118,66 @@ const { windowWidth } = useWindowSize();
     margin-bottom: 50px;
   }
   .avatar {
-    width: 100px;
+    width: 160px;
     height: auto;
     margin-right: 18px;
   }
   .LOytext {
     .numText {
-      font-family: PingFang SC;
-      font-size: 13px;
-      font-weight: 500;
+      font-family: "Poppins", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
       line-height: 19.6px;
       text-align: left;
-      color: #fff;
+      color: #272f38;
     }
     .LoyalText {
       font-family: PingFang SC;
-      font-size: 10px;
-      font-weight: 400;
+      font-size: 14px;
+      font-weight: 700;
       line-height: 14px;
       text-align: left;
-      color: #e5e5e5;
+      color: #272f38;
     }
   }
   .joinButton {
-    width: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0.5px solid #ffffff;
-    background: #ffffff1a;
-    font-family: PingFang SC;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 21px;
+    background-color: #1900e5;
+    border: 2px solid transparent;
+    border-radius: 60px;
     color: #fff;
-    padding: 12px 40px;
-    margin-bottom: 70px;
-    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    width: 170px;
+    padding: 13px 23px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    line-height: 21px;
+    // width: 170px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // border: 0.5px solid #ffffff;
+    // background: #ffffff1a;
+    // font-family: PingFang SC;
+    // font-size: 15px;
+    // font-weight: 300;
+    // line-height: 21px;
+    // color: #fff;
+    // padding: 12px 40px;
+    // margin-bottom: 70px;
+    // border-radius: 4px;
   }
   .footer-text {
-    font-family: PingFang SC;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 19.6px;
-    color: #fffffb;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+      font-weight: 700;
+      line-height: 19.6px;
+    color: #272f38;
   }
 }
 
@@ -219,4 +245,3 @@ const { windowWidth } = useWindowSize();
   }
 }
 </style>
-  

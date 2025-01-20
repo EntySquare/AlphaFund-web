@@ -1,5 +1,6 @@
 <template>
-  <div class="navbar" :class="{ hidden: isHidden }">
+ 
+  <div class="navbar"  :class="{ hidden: isHidden }">
     <div class="navbar-inner">
       <div class="container1">
         <div class="left-side">
@@ -77,8 +78,8 @@
     </div>
   </div>
 </template>
-    
-    <script lang="ts" setup>
+
+<script lang="ts" setup>
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 // 导航项列表
 const navItems = ref([
@@ -139,21 +140,24 @@ const getItemStyle = (index: number) => {
 
 <style scoped lang="less">
 .Fon24-500 {
-  font-family: PingFang SC;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 22.4px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333c4e;
+  font-family: "Poppins", sans-serif;
   text-align: center;
-  color: #000000;
+  display: block;
+  line-height: 1.923;
+  position: relative;
 }
 .navbar {
   position: fixed;
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 100px;
   background-color: #f6f6f6;
   top: 0;
   left: 0;
@@ -182,8 +186,8 @@ const getItemStyle = (index: number) => {
     display: flex;
     align-items: center;
     .logo {
-      width: 50px;
-      height: 50px;
+      width: 80px;
+      height: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -195,7 +199,7 @@ const getItemStyle = (index: number) => {
     .nav-items {
       display: flex;
       align-items: center;
-      gap: 118px;
+      gap: 100px;
     }
   }
   .right-side {
@@ -366,4 +370,3 @@ const getItemStyle = (index: number) => {
   transform: translateX(0) translateY(0);
 }
 </style>
-    
