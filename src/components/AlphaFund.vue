@@ -23,32 +23,34 @@ const teamMembers = ref([
   {
     image: "/src/assets/img/al1.png",
     name: "Rayne Steinberg",
-    position: "Chief Executive Officer, & Co-Founder",
+    position: "Founder & CEO",
+ 
+
   },
   {
     image: "/src/assets/img/al2.png",
-    name: "Jerald David",
-    position: "President, Arca Labs",
+    name: "Klaus Steiner",
+    position: "CIO-Chief Investment Officer",
   },
   {
     image: "/src/assets/img/al3.png",
-    name: "Anthony Bufinsky",
-    position: "Head of Growth, Arca Labs",
+    name: "Pierre Laurent",
+    position: "CTO",
   },
   {
     image: "/src/assets/img/al4.png",
-    name: "Michael Fleming",
-    position: "Director of Operations, Arca Labs",
+    name: "Sophia Martinez",
+    position: "COO",
   },
   {
     image: "/src/assets/img/al5.png",
-    name: "Blair Bingham",
-    position: "Lead Analyst, Arca Labs",
+    name: "Matteo Rossi",
+    position: "Director of European Operations",
   },
   {
     image: "/src/assets/img/al6.png",
-    name: "Marcus Lee",
-    position: "Head of Korea Operations",
+    name: "Amelia Zhang",
+    position: "Director of CSR & Philanthropy",
   },
 ]);
 </script>
