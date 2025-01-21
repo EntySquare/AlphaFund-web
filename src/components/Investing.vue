@@ -1,15 +1,8 @@
 <template>
-  <div class="Investing">
-    <img
-      v-if="windowWidth > 824"
-      alt=""
-      src="@/assets/img/homeBanner.png"
-      loading="lazy"
-      class="full-screen-image"
-    />
-    <div class="container">
-      <div class="content">
-        <div class="horizontal" v-if="windowWidth > 824">
+  <div class="full-screen-container">
+    <div class="background" :style="{ transform: 'translateY(' + scrollPosition + 'px)' }"></div>
+  <div class="content">
+          <div class="horizontal" v-if="windowWidth > 824">
           <div class="inText">Investing in Innovation</div>
           <div class="inText intextMargin">Shaping the AI-Driven Future.</div>
         </div>
@@ -38,16 +31,44 @@
         <div class="footer-text">
           In creating a future where technology and purpose intersect.
         </div>
-      </div>
     </div>
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts">
+import { defineComponent, ref, onMounted } from 'vue';
 import { useWindowSize } from "@/utils/useWindowSize";
 
+export default defineComponent({
+  name: 'FullScreenScroll',
+  setup() {
 const { windowWidth } = useWindowSize();
+    const scrollPosition = ref(0);
+
+    // 监听滚动事件，更新背景的偏移量
+    const handleScroll = () => {
+      scrollPosition.value = window.scrollY * 0.7; // 调整这个值以控制背景滚动的速度
+    };
+
+    // 滚动到下一部分
+    const scrollToNext = () => {
+      window.scrollTo({ top: window.innerHeight+80, behavior: 'smooth' });
+    };
+
+    // 在页面加载时添加滚动事件监听
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll);
+    });
+
+    return {
+      scrollPosition,
+      scrollToNext,
+      windowWidth
+    };
+  }
+});
 </script>
+
 
 <style scoped lang="less">
 .full-screen-image {
@@ -85,6 +106,7 @@ const { windowWidth } = useWindowSize();
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   .inText {
     font-family: Poppins, sans-serif;
@@ -93,7 +115,7 @@ const { windowWidth } = useWindowSize();
     font-size: 4rem;
     letter-spacing: -0.05em;
     line-height: 1.1;
-    text-align: left;
+    text-align: center;
     color: #272f38;
   }
   .intextMargin {
@@ -217,6 +239,8 @@ const { windowWidth } = useWindowSize();
     .content {
       .horizontal {
         display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 3px;
       }
       .AtText {
@@ -243,5 +267,53 @@ const { windowWidth } = useWindowSize();
       }
     }
   }
+}
+</style>
+<style scoped lang="less">
+.full-screen-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  
+  background: url('@/assets/img/homeBanner.png') center center no-repeat;
+  background-size: cover;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 </style>
