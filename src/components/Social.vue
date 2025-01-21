@@ -73,12 +73,12 @@ const teamMembers = ref([
   border-bottom: 1px solid #d9d9d9;
 }
 .title {
-  font-family: PingFang SC;
+  font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
-  color: #000;
+  color: #ff9633;
   margin-bottom: 100px;
 }
 .Media_Content {
@@ -97,7 +97,7 @@ const teamMembers = ref([
     .itemname {
       margin-top: 30px;
       max-width: 360px;
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 24px;
       font-weight: 600;
       line-height: 33.6px;
@@ -108,16 +108,16 @@ const teamMembers = ref([
 }
 .bottom {
   .bottom_title {
-    font-family: PingFang SC;
+    font-family: "Poppins", sans-serif;
     font-size: 36px;
     font-weight: 500;
     line-height: 50.4px;
     text-align: left;
-    color: #000;
+    color: #ff9633;
     margin-bottom: 25px;
   }
   .bottom_text {
-    font-family: PingFang SC;
+    font-family: "Poppins", sans-serif;
     font-size: 28px;
     font-weight: 400;
     line-height: 39.2px;
@@ -125,7 +125,7 @@ const teamMembers = ref([
     color: #414141;
 
     span {
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 28px;
       font-weight: 600;
       line-height: 39.2px;
@@ -152,7 +152,7 @@ const teamMembers = ref([
     padding: 50px 0;
   }
   .title {
-    font-family: PingFang SC;
+    font-family: "Poppins", sans-serif;
     font-size: 25px;
     margin-bottom: 30px;
   }
@@ -175,7 +175,7 @@ const teamMembers = ref([
   }
   .bottom {
     .bottom_title {
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 20px;
       font-weight: 500;
       line-height: 40.4px;
@@ -184,7 +184,7 @@ const teamMembers = ref([
       margin-bottom: 0px;
     }
     .bottom_text {
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 14px;
       font-weight: 400;
       line-height: 22.2px;
@@ -192,7 +192,7 @@ const teamMembers = ref([
       color: #414141;
 
       span {
-        font-family: PingFang SC;
+        font-family: "Poppins", sans-serif;
         font-size: 14px;
         line-height: 22.2px;
         text-align: left;

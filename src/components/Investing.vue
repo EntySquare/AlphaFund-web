@@ -132,7 +132,7 @@ const { windowWidth } = useWindowSize();
       color: #272f38;
     }
     .LoyalText {
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 14px;
       font-weight: 700;
       line-height: 14px;
@@ -141,7 +141,7 @@ const { windowWidth } = useWindowSize();
     }
   }
   .joinButton {
-    background-color: #1900e5;
+    background-color: #ff9633;
     border: 2px solid transparent;
     border-radius: 60px;
     color: #fff;
@@ -156,20 +156,6 @@ const { windowWidth } = useWindowSize();
     font-family: "Poppins", sans-serif;
     display: inline-block;
     line-height: 21px;
-    // width: 170px;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // border: 0.5px solid #ffffff;
-    // background: #ffffff1a;
-    // font-family: PingFang SC;
-    // font-size: 15px;
-    // font-weight: 300;
-    // line-height: 21px;
-    // color: #fff;
-    // padding: 12px 40px;
-    // margin-bottom: 70px;
-    // border-radius: 4px;
   }
   .footer-text {
     margin-top: 20px;
@@ -209,7 +195,7 @@ const { windowWidth } = useWindowSize();
 @media (max-width: 824px) {
   .Investing {
     height: 500px;
-    background: url("@/assets/img/OpenBg.png") no-repeat;
+    background: url("@/assets/img/homeBanner.png") no-repeat;
     background-size: cover;
   }
   .container {

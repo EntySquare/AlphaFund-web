@@ -105,16 +105,16 @@ const InvestmentPortfolioContent = ref([
   border-bottom: 1px solid #d9d9d9;
 }
 .title {
-  font-family: PingFang SC;
+  font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
-  color: #000;
+  color: #ff9633;
   margin-bottom: 100px;
 }
 .content_text {
-  font-family: PingFang SC;
+  font-family: "Poppins", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 33.6px;
@@ -144,7 +144,7 @@ const InvestmentPortfolioContent = ref([
       margin: 40px 0px;
     }
     .itemtitle {
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 30px;
       font-weight: 600;
       line-height: 42px;
@@ -156,7 +156,7 @@ const InvestmentPortfolioContent = ref([
     .itemcontent {
       max-width: 360px;
       padding-top: 20px;
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 22px;
       font-weight: 400;
       line-height: 30.8px;
@@ -193,7 +193,7 @@ const InvestmentPortfolioContent = ref([
       flex-direction: column;
     }
     li {
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 30px;
       font-weight: 500;
       line-height: 42px;
@@ -234,7 +234,7 @@ const InvestmentPortfolioContent = ref([
       display: flex;
       border-radius: 3px;
       border: 1px solid #cfcfcf;
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       background-color: white;
       flex-direction: column;
       justify-content: center;
@@ -251,7 +251,7 @@ const InvestmentPortfolioContent = ref([
       display: flex;
       border-radius: 3px;
       border: 1px solid #cfcfcf;
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       background-color: white;
       flex-direction: column;
       justify-content: center;
@@ -268,7 +268,7 @@ const InvestmentPortfolioContent = ref([
       display: flex;
       border-radius: 3px;
       border: 1px solid #cfcfcf;
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       background-color: white;
       flex-direction: column;
       justify-content: center;
@@ -364,7 +364,7 @@ const InvestmentPortfolioContent = ref([
           justify-content: center;
         }
         li {
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           font-size: 24px;
           font-weight: 500;
           line-height: 20px;
@@ -404,7 +404,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -421,7 +421,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -438,7 +438,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -526,7 +526,7 @@ const InvestmentPortfolioContent = ref([
           justify-content: center;
         }
         li {
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           font-size: 24px;
           font-weight: 500;
           line-height: 20px;
@@ -565,7 +565,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -583,7 +583,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -600,7 +600,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -738,7 +738,7 @@ const InvestmentPortfolioContent = ref([
           justify-content: center;
         }
         li {
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           font-size: 20px;
           font-weight: 500;
           line-height: 10px;
@@ -778,7 +778,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -795,7 +795,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -812,7 +812,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -888,7 +888,7 @@ const InvestmentPortfolioContent = ref([
     //       justify-content: center;
     //     }
     //     li {
-    //       font-family: PingFang SC;
+    //       font-family: "Poppins", sans-serif;
     //       font-size: 30px;
     //       font-weight: 500;
     //       line-height: 42px;
@@ -925,7 +925,7 @@ const InvestmentPortfolioContent = ref([
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: PingFang SC;
+    //   font-family: "Poppins", sans-serif;
     //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
@@ -943,7 +943,7 @@ const InvestmentPortfolioContent = ref([
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: PingFang SC;
+    //   font-family: "Poppins", sans-serif;
     //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
@@ -960,7 +960,7 @@ const InvestmentPortfolioContent = ref([
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: PingFang SC;
+    //   font-family: "Poppins", sans-serif;
     //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
@@ -1095,7 +1095,7 @@ const InvestmentPortfolioContent = ref([
           justify-content: center;
         }
         li {
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           font-size: 20px;
           font-weight: 500;
           line-height: 10px;
@@ -1135,7 +1135,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1152,7 +1152,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1169,7 +1169,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1245,7 +1245,7 @@ const InvestmentPortfolioContent = ref([
     //       justify-content: center;
     //     }
     //     li {
-    //       font-family: PingFang SC;
+    //       font-family: "Poppins", sans-serif;
     //       font-size: 30px;
     //       font-weight: 500;
     //       line-height: 42px;
@@ -1282,7 +1282,7 @@ const InvestmentPortfolioContent = ref([
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: PingFang SC;
+    //   font-family: "Poppins", sans-serif;
     //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
@@ -1300,7 +1300,7 @@ const InvestmentPortfolioContent = ref([
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: PingFang SC;
+    //   font-family: "Poppins", sans-serif;
     //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
@@ -1317,7 +1317,7 @@ const InvestmentPortfolioContent = ref([
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: PingFang SC;
+    //   font-family: "Poppins", sans-serif;
     //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
@@ -1453,7 +1453,7 @@ const InvestmentPortfolioContent = ref([
           justify-content: center;
         }
         li {
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           font-size: 15px;
           font-weight: 500;
           line-height: 5px;
@@ -1491,7 +1491,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1508,7 +1508,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1525,7 +1525,7 @@ const InvestmentPortfolioContent = ref([
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;

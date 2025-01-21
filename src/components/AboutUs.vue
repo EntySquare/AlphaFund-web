@@ -83,7 +83,8 @@ const aboutUsContent = ref([
   font-weight: 500;
   line-height: 56px;
   text-align: center;
-  color: #000;
+  color: #ff9633;
+  
   margin-bottom: 100px;
 }
 .AboutUs_Content {
