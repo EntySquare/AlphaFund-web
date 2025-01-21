@@ -13,7 +13,8 @@ const { windowWidth } = useWindowSize();
           </div>
           <div class="text" v-if="windowWidth > 824">
             To provide investors with stable returns，<br />
-            Help them achieve long-term financial goals.
+            Help them achieve long-term
+            financial goals.
           </div>
           <div class="text" v-else>
             To provide investors with stable returns， Help them achieve long-term financial goals.
@@ -145,12 +146,12 @@ const { windowWidth } = useWindowSize();
       }
     }
     .text {
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 16px;
       font-weight: 400;
       line-height: 22.4px;
       text-align: left;
-      color: #000000;
+      color: #272f38;
     }
     .Links {
       display: flex;
@@ -163,7 +164,7 @@ const { windowWidth } = useWindowSize();
   }
   .top_right {
     display: flex;
-    gap: 90px;
+    gap: 50px;
     .navSpecial {
       display: flex;
       flex-direction: column;
@@ -175,26 +176,27 @@ const { windowWidth } = useWindowSize();
       gap: 15px;
       .navTitle {
         margin-bottom: 10px;
-        font-family: PingFang SC;
+        font-family: "Poppins", sans-serif;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 28px;
         text-align: left;
-        color: #000000;
+        color: #FFB566;
       }
       .navText {
-        font-family: PingFang SC;
-        font-size: 20px;
-        font-weight: 400;
+        font-family: "Poppins", sans-serif;
+        font-size: 18px;
+        font-weight: 300;
         line-height: 28px;
         text-align: left;
-        color: #000000;
+        color: #272f38;
+
       }
     }
   }
 }
 .bottom {
-  font-family: PingFang SC;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;

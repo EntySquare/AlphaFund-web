@@ -51,12 +51,12 @@
   width: 100%;
 }
 .title {
-  font-family: PingFang SC;
+  font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
-  color: #000;
+  color: #ff9633;
   margin-bottom: 100px;
 }
 .News {
@@ -75,7 +75,7 @@
     }
     .itemtext {
       margin-top: 30px;
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 20px;
       font-weight: 400;
       line-height: 28px;
@@ -91,37 +91,53 @@
   align-items: center;
   padding: 70px 0;
   flex-direction: column;
-  background: #6d6d6dcc;
+  background-color: #eaeaea;
+  //background: #6d6d6dcc;
   border: 1px solid #ffffff;
   box-shadow: 6px 6px 1px 1px #000000e5;
   border-radius: 31px;
   .openTitle {
-    font-family: PingFang SC;
+    font-family: "Poppins", sans-serif;
     font-size: 40px;
     font-weight: 600;
     line-height: 56px;
     text-align: center;
-    color: #ffffff;
+    color: #272f38;
   }
   .openText {
-    font-family: PingFang SC;
+    font-family: "Poppins", sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 28px;
     text-align: center;
-    color: #ffffff;
+    color: #272f38;
     margin-top: 15px;
     margin-bottom: 60px;
   }
   .openButton {
-    padding: 16px 60px;
-    font-family: PingFang SC;
+    background-color: #ff9633;
+    border: 2px solid transparent;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
     font-size: 20px;
-    font-weight: 600;
-    line-height: 28px;
-    color: #ffffff;
-    border-radius: 2px;
-    background: #000000;
+    font-weight: 700;
+    width: 180px;
+    padding: 15px 23px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+    font-family: "Poppins", sans-serif;
+    display: inline-block;
+    line-height: 21px;
+    // padding: 16px 60px;
+    // font-family: "Poppins", sans-serif;
+    // font-size: 20px;
+    // font-weight: 600;
+    // line-height: 28px;
+    // color: #ffffff;
+    // border-radius: 2px;
+    // background: #000000;
   }
 }
 
@@ -182,7 +198,7 @@
           line-height: 40px;
         }
         .openText {
-          font-family: PingFang SC;
+          font-family: "Poppins", sans-serif;
           font-size: 16px;
           font-weight: 500;
           line-height: 20px;

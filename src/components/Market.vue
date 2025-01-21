@@ -72,12 +72,12 @@ const teamMembers = ref([
   border-bottom: 1px solid #d9d9d9;
 }
 .title {
-  font-family: PingFang SC;
+  font-family: "Poppins", sans-serif;
   font-size: 40px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
-  color: #000;
+  color: #ff9633;
   margin-bottom: 100px;
 }
 .Market_Content {
@@ -96,7 +96,7 @@ const teamMembers = ref([
     .itemname {
       margin-top: 30px;
       max-width: 360px;
-      font-family: PingFang SC;
+      font-family: "Poppins", sans-serif;
       font-size: 20px;
       font-weight: 400;
       line-height: 28px;
