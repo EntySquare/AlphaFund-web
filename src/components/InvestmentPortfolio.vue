@@ -23,14 +23,25 @@
       </div>
       <div class="Energy_Container">
         <div class="left_content">
+       
+
           <ul>
-            <li>Clean Energy: 30%</li>
-            <li>Educational Technology: 20%</li>
-            <li>Artificial Intelligence (AI): 50%</li>
+            <li>Artificial Intelligence (AI): 40%</li>
+            <li>Clean Energy: 15%</li>
+            <li>Educational Technology: 15%</li>
+            
+
+                        <li>Blockchain: 15%</li>
+            <li>Others: 15%</li>
+
           </ul>
         </div>
         <div class="right_content">
-          <div class="pie-chart">
+       <div style="width: 100%; height: 100%;display: flex;align-items: center;justify-content: center;">
+    <!-- 饼图容器 -->
+    <v-chart :option="chartOptions" class="chart" ></v-chart>
+  </div>
+          <!-- <div class="pie-chart">
             <img src="/src/assets/img/pieChart.png" alt="Pie Chart" />
             <div class="rectangles">
               <div class="rightRectangle">
@@ -62,7 +73,7 @@
                 <div class="label">Artificial Intelligence (AI)</div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -94,6 +105,47 @@ const InvestmentPortfolioContent = ref([
   },
 ]);
 
+
+import { defineComponent } from 'vue';
+import { use } from 'echarts/core';
+import { PieChart } from 'echarts/charts';
+import { TooltipComponent } from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+import VChart from 'vue-echarts';
+
+// 注册 ECharts 需要的组件
+use([PieChart, TooltipComponent, CanvasRenderer]);
+
+const chartOptions = {
+        tooltip: {
+          trigger: 'item',
+          formatter: '{b}:  ({d}%)',
+        },
+        series: [
+          {
+            type: 'pie',
+            radius: '50%',
+            data: [
+              { value: 40, name: 'Artificial Intelligence (AI)' },
+              { value: 15, name: 'Clean Energy' },
+              { value: 15, name: 'Educational Technology' },
+              { value: 15, name: 'Blockchain' },
+              { value: 15, name: 'Others' },
+            ],
+            color: ['#FFB300', '#FFA500', '#FFCC00', '#FF8C00', '#FFD700'], // 黄色、橙色系的颜色
+            label: {
+              show: false, // 去除饼图上的文字标签
+            },
+            emphasis: {
+              itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)',
+              },
+            },
+          },
+        ],
+      }
 
 </script>
 
@@ -176,13 +228,14 @@ const InvestmentPortfolioContent = ref([
 }
 .Energy_Container {
   width: 100%;
-  height: 565px;
+  // height: 565px;
   display: flex;
   flex: column;
+  
   align-items: center;
   margin-top: 100px;
   .left_content {
-    width: 40%;
+    width: 50%;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -206,13 +259,14 @@ const InvestmentPortfolioContent = ref([
   }
 
   .right_content {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
-
+    // position: relative;
+.chart{
+height: 600px; width: 600px;}
     .pie-chart {
       width: 100%;
       position: relative;
@@ -376,13 +430,14 @@ const InvestmentPortfolioContent = ref([
         }
       }
       .right_content {
-        width: 60%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         position: relative;
-
+.chart{
+height: 600px; width: 100%;}
         .pie-chart {
           width: 100%;
           position: relative;
@@ -538,7 +593,7 @@ const InvestmentPortfolioContent = ref([
         }
       }
       .right_content {
-        width: 60%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -750,7 +805,7 @@ const InvestmentPortfolioContent = ref([
         }
       }
       .right_content {
-        width: 60%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1107,13 +1162,14 @@ const InvestmentPortfolioContent = ref([
         }
       }
       .right_content {
-        width: 60%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         position: relative;
-
+.chart{
+height: 400px; width: 400px;}
         .pie-chart {
           width: 100%;
           position: relative;
@@ -1465,13 +1521,14 @@ const InvestmentPortfolioContent = ref([
         }
       }
       .right_content {
-        width: 60%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         position: relative;
-
+.chart{
+height: 300px; width: 300px;}
         .pie-chart {
           width: 100%;
           position: relative;

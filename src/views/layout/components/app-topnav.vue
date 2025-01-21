@@ -262,7 +262,7 @@ const getItemStyle = (index: number) => {
   .navbar-inner {
     .container1 {
       .left-side {
-        gap: 40px;
+        gap: 30px;
       }
       .nav-items {
         gap: 40px;
@@ -270,6 +270,17 @@ const getItemStyle = (index: number) => {
     }
   }
 }
+@media (max-width: 924px) { 
+.navbar-inner {
+    .container1 {
+      .left-side {
+        gap: 30px;
+      }
+      .nav-items {
+        gap: 30px;
+      }
+    }
+  }}
 @media (max-width: 824px) {
   .navbar-inner {
     padding: 0 20px;
@@ -278,6 +289,9 @@ const getItemStyle = (index: number) => {
       .left-side {
         width: 100%;
         justify-content: space-between;
+        .logo{
+        width: 60px;
+        height: 60px;}
       }
     }
   }
