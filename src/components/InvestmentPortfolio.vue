@@ -1169,7 +1169,7 @@ height: 600px; width: 100%;}
         flex-direction: column;
         position: relative;
 .chart{
-height: 400px; width: 400px;}
+height: 350px; width: 350px;}
         .pie-chart {
           width: 100%;
           position: relative;
@@ -1528,7 +1528,7 @@ height: 400px; width: 400px;}
         flex-direction: column;
         position: relative;
 .chart{
-height: 300px; width: 300px;}
+height: 280px; width: 280px;}
         .pie-chart {
           width: 100%;
           position: relative;
