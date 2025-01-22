@@ -8,6 +8,7 @@
     <div class="container">
       <SlideInContent> <AboutUs /></SlideInContent>
       <SlideInContent> <InvestmentPortfolio /></SlideInContent>
+      <SlideInContent> <Cryptocurrency/></SlideInContent>
       <SlideInContent> <Market /></SlideInContent>
       <SlideInContent> <Social /></SlideInContent>
       <SlideInContent> <Media /></SlideInContent>

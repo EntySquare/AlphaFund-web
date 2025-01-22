@@ -36,7 +36,7 @@ import { ref } from "vue";
 // Team Members
 const teamMembers = ref([
   {
-    image: "/src/assets/img/Social2.png",
+    image: "/src/assets/img/Social1.png",
     title: "Sunshine Classroom Project  ",
   },
   {
@@ -44,19 +44,19 @@ const teamMembers = ref([
     title: "Sunshine Classroom Project  ",
   },
   {
-    image: "/src/assets/img/Social2.png",
+    image: "/src/assets/img/Social3.png",
     title: "Sunshine Classroom Project  ",
   },
   {
-    image: "/src/assets/img/Social2.png",
+    image: "/src/assets/img/Social4.png",
     title: "Sunshine Classroom Project  ",
   },
   {
-    image: "/src/assets/img/Social2.png",
+    image: "/src/assets/img/Social5.png",
     title: "Sunshine Classroom Project  ",
   },
   {
-    image: "/src/assets/img/Social2.png",
+    image: "/src/assets/img/Social6.png",
     title: "Sunshine Classroom Project  ",
   },
 ]);
@@ -92,7 +92,7 @@ const teamMembers = ref([
   .item {
     .itemimage {
       width: 360px;
-      height: auto;
+      height: 180px;
     }
     .itemname {
       margin-top: 30px;
