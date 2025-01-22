@@ -1,6 +1,9 @@
 <template>
   <div class="full-screen-container">
-    <div class="background" :style="{ transform: 'translateY(' + scrollPosition + 'px)' }"></div>
+    <div
+      class="background"
+      :style="{ transform: 'translateY(' + scrollPosition + 'px)' }"
+    ></div>
     <div class="container">
       <div class="content">
         <div class="horizontal" v-if="windowWidth > 824">
@@ -38,37 +41,37 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from "vue"
-import { useWindowSize } from "@/utils/useWindowSize"
+import { defineComponent, ref, onMounted } from "vue";
+import { useWindowSize } from "@/utils/useWindowSize";
 
 export default defineComponent({
   name: "FullScreenScroll",
   setup() {
-    const { windowWidth } = useWindowSize()
-    const scrollPosition = ref(0)
+    const { windowWidth } = useWindowSize();
+    const scrollPosition = ref(0);
 
     // 监听滚动事件，更新背景的偏移量
     const handleScroll = () => {
-      scrollPosition.value = window.scrollY * 0.7 // 调整这个值以控制背景滚动的速度
-    }
+      scrollPosition.value = window.scrollY * 0.7; // 调整这个值以控制背景滚动的速度
+    };
 
     // 滚动到下一部分
     const scrollToNext = () => {
-      window.scrollTo({ top: window.innerHeight + 80, behavior: "smooth" })
-    }
+      window.scrollTo({ top: window.innerHeight + 80, behavior: "smooth" });
+    };
 
     // 在页面加载时添加滚动事件监听
     onMounted(() => {
-      window.addEventListener("scroll", handleScroll)
-    })
+      window.addEventListener("scroll", handleScroll);
+    });
 
     return {
       scrollPosition,
       scrollToNext,
       windowWidth,
-    }
+    };
   },
-})
+});
 </script>
 
 <style scoped lang="less">
@@ -180,7 +183,7 @@ export default defineComponent({
   border-radius: 60px;
   color: #fff;
   cursor: pointer;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   font-weight: 700;
   width: 170px;
   padding: 13px 23px;
@@ -190,6 +193,47 @@ export default defineComponent({
   font-family: "Poppins", sans-serif;
   display: inline-block;
   line-height: 21px;
+  position: relative;
+  overflow: hidden;
+}
+
+.joinButton:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(255, 150, 51, 0.5);
+}
+
+.joinButton::after {
+  content: "";
+  position: absolute;
+  top: -120%;
+  left: -120%;
+  width: 250%;
+  height: 8px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  transition: none;
+  opacity: 0;
+}
+
+.joinButton:hover::after {
+  opacity: 1;
+  animation: diagonal-sparkle 2.5s ease-out forwards;
+}
+
+@keyframes diagonal-sparkle {
+  0% {
+    top: -100%;
+    left: -180%;
+  }
+  100% {
+    top: 100%;
+    left: 180%;
+  }
 }
 
 .footer-text {
@@ -318,7 +362,6 @@ export default defineComponent({
         font-weight: 400;
         //word-spacing: 3px;
         text-align: center;
-        
       }
 
       .intextMargin {
@@ -360,11 +403,4 @@ export default defineComponent({
   background: url("@/assets/img/homeBanner.png") center center no-repeat;
   background-size: cover;
 }
-
-
-
-
-
-
-
 </style>
