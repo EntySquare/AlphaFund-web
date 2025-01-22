@@ -130,14 +130,7 @@
     font-family: "Poppins", sans-serif;
     display: inline-block;
     line-height: 21px;
-    // padding: 16px 60px;
-    // font-family: "Poppins", sans-serif;
-    // font-size: 20px;
-    // font-weight: 600;
-    // line-height: 28px;
-    // color: #ffffff;
-    // border-radius: 2px;
-    // background: #000000;
+    box-shadow: 0px 8px 15px rgba(255, 150, 51, 0.5);
   }
 }
 
