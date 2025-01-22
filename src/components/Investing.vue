@@ -92,14 +92,12 @@ export default defineComponent({
 }
 
 .container {
+  position: relative;
   height: 100%;
-  position: absolute;
-  height: 100%;
-  /* left: 0; */
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   padding: 0 120px;
 }
@@ -109,7 +107,7 @@ export default defineComponent({
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }
@@ -137,7 +135,8 @@ export default defineComponent({
   margin-bottom: 65px;
   max-width: 500px;
   font-size: 1.5rem;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.08em;
+
   line-height: 1.1;
   text-align: left;
   color: #272f38;
@@ -263,6 +262,63 @@ export default defineComponent({
         font-size: 20px;
         line-height: 30px;
         font-weight: 400;
+      }
+
+      .intextMargin {
+        margin-bottom: 15px;
+      }
+
+      .stats {
+        margin-bottom: 20px;
+      }
+
+      .joinButton {
+        margin-bottom: 20px;
+        padding: 8px 0px;
+        width: 150px;
+      }
+
+      .avatar {
+        width: 100px;
+        height: auto;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+@media (max-width: 460px) {
+  .Investing {
+    height: 500px;
+    background: url("@/assets/img/homeBanner.png") no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    padding: 0 20px;
+
+    .content {
+      .inText {
+        font-size: 30px !important;
+        font-weight: 500;
+      }
+
+      .horizontal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+      }
+
+      .AtText {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 30px;
+        font-weight: 400;
+        //word-spacing: 3px;
+        text-align: center;
+        
       }
 
       .intextMargin {

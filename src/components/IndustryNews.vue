@@ -214,4 +214,32 @@
     }
   }
 }
+@media (max-width: 460px) {
+  .IndustryNews {
+    .container {
+      padding: 50px 20px 100px 20px;
+      .Open {
+        padding: 30px 10px;
+        border-radius: 21px;
+        .openTitle {
+          font-size:18px;
+          line-height: 40px;
+        }
+        .openText {
+          font-family: "Poppins", sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          margin-top: 15px;
+          margin-bottom: 40px;
+        }
+        .openButton {
+          padding: 10px 30px;
+          font-size: 14px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}
 </style>

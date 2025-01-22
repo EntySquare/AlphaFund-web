@@ -180,7 +180,7 @@ const teamMembers = ref([
       font-weight: 500;
       line-height: 40.4px;
       text-align: left;
-      color: #000;
+      color: #ff9633;
       margin-bottom: 0px;
     }
     .bottom_text {
