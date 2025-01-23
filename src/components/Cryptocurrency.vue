@@ -65,7 +65,7 @@ const cryptocurrencyData = [
   {
     token: "NEAR",
     project: "NEAR Protocol",
-    category: "公链",
+    category: "Public chain",
     lowestPrice: 0.52,
     highestPrice: 20.53,
     growth: "137%",
@@ -75,7 +75,7 @@ const cryptocurrencyData = [
   {
     token: "APT",
     project: "Aptos",
-    category: "公链",
+    category: "Public chain",
     lowestPrice: 3.06,
     highestPrice: 28,
     growth: "774.63%",
@@ -125,7 +125,7 @@ const cryptocurrencyData = [
   {
     token: "SEI",
     project: "Sei",
-    category: "公链",
+    category: "Public chain",
     lowestPrice: 0.09,
     highestPrice: 1.17,
     growth: "/",
@@ -135,7 +135,7 @@ const cryptocurrencyData = [
   {
     token: "ENS",
     project: "Ethereum Name Service",
-    category: "域名",
+    category: "domain name",
     lowestPrice: 6.66,
     highestPrice: 85.79,
     growth: "/",

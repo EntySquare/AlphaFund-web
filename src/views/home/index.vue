@@ -13,6 +13,7 @@
       <SlideInContent> <Social /></SlideInContent>
       <SlideInContent> <Media /></SlideInContent>
       <SlideInContent> <AlphaFund /></SlideInContent>
+      <SlideInContent> <Advisory /></SlideInContent>
       <SlideInContent> <IndustryNews /></SlideInContent>
     </div>
   </div>

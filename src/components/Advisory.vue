@@ -3,7 +3,7 @@
     <div class="container">
       <!-- AlphaFund Brilliance Corporation Section -->
 
-      <div class="title">AlphaFund Brilliance Corporation</div>
+      <div class="title">Advisory team</div>
       <div class="AlphaFund_Content">
         <div v-for="(member, index) in teamMembers" :key="index" class="item">
           <img :src="member.image" :alt="member.name" class="itemimage" />
@@ -21,37 +21,28 @@ import { ref } from "vue";
 // Team Members
 const teamMembers = ref([
   {
-    image: "/src/assets/img/al.png",
-    name: "Rayne Steinberg",
-    position: "Founder & CEO",
+    image: "/src/assets/img/ad1.png",
+    name: "이진섭",
+    position: "Digital Asset Venture Capital Advisor",
  
 
   },
   {
-    image: "/src/assets/img/al2.png",
-    name: "Klaus Steiner",
-    position: "CIO-Chief Investment Officer",
+    image: "/src/assets/img/ad2.png",
+    name: "Sarah Thompson",
+    position: "Wealth Management & Asset Allocation Consultant",
   },
   {
-    image: "/src/assets/img/al3.png",
-    name: "Pierre Laurent",
-    position: "CTO",
+    image: "/src/assets/img/ad3.png",
+    name: "Christopher Hughes",
+    position: "AI & Technology Innovation Advisor",
   },
   {
-    image: "/src/assets/img/al4.png",
-    name: "Sophia Martinez",
-    position: "COO",
+    image: "/src/assets/img/ad4.png",
+    name: "Maria Sanchez",
+    position: "International Investment & Risk Management Consultant",
   },
-  {
-    image: "/src/assets/img/al5.png",
-    name: "Matteo Rossi",
-    position: "Director of European Operations",
-  },
-  {
-    image: "/src/assets/img/al6.png",
-    name: "Amelia Zhang",
-    position: "Director of CSR & Philanthropy",
-  },
+ 
 ]);
 </script>
 
@@ -78,16 +69,16 @@ const teamMembers = ref([
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 28px;
-  row-gap: 30px;
+  gap: 24px;
+  row-gap: 28px;
   .item {
-    border-radius: 26px;
+    border-radius: 20px;
     border: 2px solid #eeeeee;
     background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 55px 50px 59px 50px;
+    padding: 35px 30px 39px 30px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     &:hover {
@@ -95,12 +86,14 @@ const teamMembers = ref([
       box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
     }
     .itemimage {
-      width: 270px;
-      height: 270px;
+      width: 210px;
+      height: 210px;
       border-radius: 50%;
       margin-bottom: 30px;
     }
     .itemname {
+          max-width: 200px;
+
       font-family: "Poppins", sans-serif;
       font-size: 30px;
       font-weight: 600;
@@ -110,7 +103,7 @@ const teamMembers = ref([
       margin-bottom: 22px;
     }
     .itemposition {
-      max-width: 216px;
+      max-width: 200px;
       font-family: "Poppins", sans-serif;
       font-size: 20px;
       font-weight: 500;
@@ -131,6 +124,68 @@ const teamMembers = ref([
     padding: 0 60px;
   }
 }
+@media (max-width: 1288px) {
+  .AlphaFund {
+    padding: 0 50px;
+    .AlphaFund_Content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  row-gap: 20px;
+  .item {
+    border-radius: 20px;
+    border: 2px solid #eeeeee;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 25px 30px 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+    }
+    .itemimage {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+    .itemname {
+          max-width: 170px;
+      font-size: 26px;
+      margin-bottom: 22px;
+    }
+    .itemposition {
+      max-width: 170px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+  }
+}
+@media (max-width: 1096px) {
+  .AlphaFund {
+
+    .AlphaFund_Content {
+
+  .item {
+   flex: 0 0 calc(50% - 10px); /* 每个项占据一半的宽度，减去间距 */
+   
+    .itemname {
+          max-width: 100%;
+    }
+    .itemposition {
+      max-width: 100%;
+    }
+  }
+}
+  }
+}
 @media (max-width: 824px) {
   .AlphaFund {
     padding: 0 20px;
@@ -147,6 +202,7 @@ const teamMembers = ref([
     gap: 14px;
     row-gap: 15px;
     .item {
+      flex: 0 0 100% !important; /* 每个项占据一整行 */
       border-radius: 20px;
       width: 100%;
 

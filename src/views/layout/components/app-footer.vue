@@ -35,7 +35,7 @@ const { windowWidth } = useWindowSize();
             </div>
             <div class="nav">
               <div class="navTitle">Address</div>
-              <div class="navText">公司地址</div>
+              <div class="navText">Company address</div>
             </div>
           </div>
           <div class="nav">

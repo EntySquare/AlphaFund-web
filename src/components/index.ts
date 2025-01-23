@@ -14,6 +14,7 @@ import Investing from "./Investing.vue";
 
 import echarts from "./echarts.vue";
 import Cryptocurrency from "./Cryptocurrency.vue"
+import Advisory from "./Advisory.vue"
 // 将全局组件封装到插件中
 export default {
   install(Vue: App) {
@@ -30,6 +31,7 @@ export default {
     Vue.component("InvestmentPortfolio", InvestmentPortfolio);
     Vue.component('ECHARTS',echarts) 
         Vue.component('Cryptocurrency',Cryptocurrency) 
+        Vue.component('Advisory',Advisory) 
 
   },
 };

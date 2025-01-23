@@ -26,14 +26,11 @@
        
 
           <ul>
-            <li>Artificial Intelligence (AI): 40%</li>
-            <li>Clean Energy: 15%</li>
-            <li>Educational Technology: 15%</li>
-
-
-            <li>Blockchain: 15%</li>
-            <li>Others: 15%</li>
-
+            <li>Artificial Intelligence: 40%</li>
+            <li>Blockchain: 20%</li>
+            <li>Education Tech: 10%</li>
+            <li>Clean Energy: 12%</li>
+            <li>Others: 18%</li>
           </ul>
         </div>
         <div class="right_content">
@@ -126,11 +123,11 @@ const chartOptions = {
       type: "pie",
       radius: "50%",
       data: [
-        { value: 40, name: "Artificial Intelligence (AI)" },
-        { value: 15, name: "Clean Energy" },
-        { value: 15, name: "Educational Technology" },
-        { value: 15, name: "Blockchain" },
-        { value: 15, name: "Others" },
+        { value: 40, name: "Artificial Intelligence" },
+        { value: 20, name: "Blockchain" },
+        { value: 10, name: "Education Tech" },
+        { value: 12, name: "Clean Energy" },
+        { value: 18, name: "Others" },
       ],
       color: ["#FFB300", "#FFA500", "#FFCC00", "#FF8C00", "#FFD700"], // 黄色、橙色系的颜色
       label: {

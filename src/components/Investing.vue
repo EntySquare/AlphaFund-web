@@ -400,7 +400,8 @@ export default defineComponent({
   left: 0;
   right: 0;
   height: 100%;
-  background: url("@/assets/img/homeBanner.png") center center no-repeat;
+  // background: url("@/assets/img/homeBanner.png") center center no-repeat;
+  background: url("@/assets/img/bg.jpg") center center no-repeat;
   background-size: cover;
 }
 </style>
