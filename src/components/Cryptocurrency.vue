@@ -39,7 +39,7 @@ const cryptocurrencyData = [
     lowestPrice: 0.00000006,
     highestPrice: 0.0000283,
     growth: "1602999%",
-    marketCap: "69.8亿美元",
+    marketCap: "69.8 billion US dollars",
     profitRate: "/",
   },
   {
@@ -49,7 +49,7 @@ const cryptocurrencyData = [
     lowestPrice: 0.30,
     highestPrice: 1.50,
     growth: "339.32%",
-    marketCap: "36.8亿美元",
+    marketCap: "36.8 billion US dollars",
     profitRate: "/",
   },
   {
@@ -59,7 +59,7 @@ const cryptocurrencyData = [
     lowestPrice: 25.95,
     highestPrice: 706.32,
     growth: "217%",
-    marketCap: "57.2亿美元",
+    marketCap: "57.2 billion US dollars",
     profitRate: "/",
   },
   {
@@ -69,7 +69,7 @@ const cryptocurrencyData = [
     lowestPrice: 0.52,
     highestPrice: 20.53,
     growth: "137%",
-    marketCap: "56.3亿美元",
+    marketCap: "56.3 billion US dollars",
     profitRate: "/",
   },
   {
@@ -79,7 +79,7 @@ const cryptocurrencyData = [
     lowestPrice: 3.06,
     highestPrice: 28,
     growth: "774.63%",
-    marketCap: "35.7亿美元",
+    marketCap: "35.7 billion US dollars",
     profitRate: "/",
   },
   {
@@ -89,7 +89,7 @@ const cryptocurrencyData = [
     lowestPrice: 2.46,
     highestPrice: 237.61,
     growth: "960%",
-    marketCap: "32.1亿美元",
+    marketCap: "32.1 billion US dollars",
     profitRate: "/",
   },
   {
@@ -99,7 +99,7 @@ const cryptocurrencyData = [
     lowestPrice: 0.26,
     highestPrice: 4.76,
     growth: "180%",
-    marketCap: "20亿美元",
+    marketCap: "20 billion US dollars",
     profitRate: "/",
   },
   {
@@ -109,7 +109,7 @@ const cryptocurrencyData = [
     lowestPrice: 0.65,
     highestPrice: 52.87,
     growth: "/",
-    marketCap: "21亿美元",
+    marketCap: "21 billion US dollars",
     profitRate: "/",
   },
   {
@@ -119,7 +119,7 @@ const cryptocurrencyData = [
     lowestPrice: 0.40,
     highestPrice: 4.79,
     growth: "/",
-    marketCap: "18.2亿美元",
+    marketCap: "18.2 billion US dollars",
     profitRate: "/",
   },
   {
@@ -129,7 +129,7 @@ const cryptocurrencyData = [
     lowestPrice: 0.09,
     highestPrice: 1.17,
     growth: "/",
-    marketCap: "9.7亿美元",
+    marketCap: "9.7 billion US dollars",
     profitRate: "/",
   },
   {
@@ -139,7 +139,7 @@ const cryptocurrencyData = [
     lowestPrice: 6.66,
     highestPrice: 85.79,
     growth: "/",
-    marketCap: "7.5亿美元",
+    marketCap: "7.5 billion US dollars",
     profitRate: "/",
   },
 ];
