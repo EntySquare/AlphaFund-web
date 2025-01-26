@@ -4,8 +4,9 @@
       <!-- Media Brilliance Corporation Section -->
 
       <div class="title">Social Impact</div>
+    
       <div class="Media_Content">
-        <div v-for="(member, index) in teamMembers" :key="index" class="item">
+        <div v-for="(member, index) in teamMembers" :key="index" class="item" @click="clickURL(member.url)">
           <LINE lineWidth="810px">
             <template #image>
               <img :src="member.image" class="itemimage" />
@@ -29,58 +30,76 @@
     </div>
   </div>
 </template>
-  
-  <script lang="ts" setup>
+
+<script lang="ts" setup>
+import { url } from "inspector";
 import { ref } from "vue";
 
 // Team Members
 const teamMembers = ref([
   {
     image: "/src/assets/img/Social1.png",
-    title: "Sunshine Classroom Project  ",
+    title: "Caring for Nigerian Children: Brilliance Team in Action",
+    url: 'http://www.hollywoodinews.com/news/1871.html'
   },
   {
     image: "/src/assets/img/Social2.png",
-    title: "Sunshine Classroom Project  ",
+    title: "나이지리아 아이들을 위한 희망의 손길: Brilliance Team의 Sunshine Classroom Project",
+    url: 'http://news.financeweeks.com/news/804.html'
   },
   {
     image: "/src/assets/img/Social3.png",
-    title: "Sunshine Classroom Project  ",
+    title: "愛をもって希望を伝える：Brilliance Team、アフリカの高齢者に焦点を当てる",
+    url: "http://jp.globalpapertimes.com/news/740.html"
   },
   {
     image: "/src/assets/img/Social4.png",
-    title: "Sunshine Classroom Project  ",
+    title: "  Spreading Hope with Love: Brilliance Team Focuses on Africa's Elderly Population",
+    url: 'http://city.ulocaldaily.com/news/1810.html'
   },
   {
     image: "/src/assets/img/Social5.png",
-    title: "Sunshine Classroom Project  ",
+    title: "사랑으로 희망을 전하다: Brilliance Team, 아프리카 노인들을 위한 지원 활동",
+    url: 'http://health.medicaldailys.com/news/806.html'
   },
   {
     image: "/src/assets/img/Social6.png",
-    title: "Sunshine Classroom Project  ",
+    title: "愛をもって希望を伝える：Brilliance Team、アフリカの高齢者に焦点を当てる",
+    url: 'http://jp.globalpapertimes.com/news/740.html'
   },
+
+
 ]);
+
+const clickURL = (url:string)=>{
+   window.open(url, '_blank'); // Open URL in a new tab
+
+}
 </script>
-  
-  <style scoped lang="less">
+
+<style scoped lang="less">
 .Media {
   padding: 0 120px;
   width: 100%;
 }
+
 .container {
   padding: 100px 0;
   width: 100%;
   border-bottom: 1px solid #d9d9d9;
 }
+
 .title {
-  font-family: "Poppins", sans-serif;
-  font-size: 40px;
+font-family: Inter, Tahoma, sans-serif;
+font-size: 34px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
   color: #ff9633;
   margin-bottom: 100px;
 }
+
+
 .Media_Content {
   width: 100%;
   display: flex;
@@ -89,44 +108,49 @@ const teamMembers = ref([
   gap: 50px;
   row-gap: 80px;
   margin-bottom: 100px;
+
   .item {
     .itemimage {
       width: 360px;
       height: 180px;
+      border-radius: 4px;
     }
+
     .itemname {
       margin-top: 30px;
       max-width: 360px;
-      font-family: "Poppins", sans-serif;
-      font-size: 24px;
-      font-weight: 600;
-      line-height: 33.6px;
+    font-family: Inter, Tahoma, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30.6px;
 
       color: #000;
     }
   }
 }
+
 .bottom {
   .bottom_title {
-    font-family: "Poppins", sans-serif;
-    font-size: 36px;
+  font-family: Inter, Tahoma, sans-serif;
+    font-size: 28px;
     font-weight: 500;
     line-height: 50.4px;
     text-align: left;
     color: #ff9633;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
   }
+
   .bottom_text {
-    font-family: "Poppins", sans-serif;
-    font-size: 28px;
+  font-family: Inter, Tahoma, sans-serif;
+    font-size: 20px;
     font-weight: 400;
     line-height: 39.2px;
     text-align: left;
     color: #414141;
 
     span {
-      font-family: "Poppins", sans-serif;
-      font-size: 28px;
+    font-family: Inter, Tahoma, sans-serif;
+      font-size: 20px;
       font-weight: 600;
       line-height: 39.2px;
       text-align: left;
@@ -139,31 +163,38 @@ const teamMembers = ref([
     padding: 0 100px;
   }
 }
+
 @media (max-width: 1380px) {
   .Media {
     padding: 0 60px;
   }
 }
+
 @media (max-width: 824px) {
   .Media {
     padding: 0 20px;
   }
+
   .container {
     padding: 50px 0;
   }
+
   .title {
-    font-family: "Poppins", sans-serif;
+  font-family: Inter, Tahoma, sans-serif;
     font-size: 25px;
     margin-bottom: 30px;
   }
+
   .Media_Content {
     gap: 20px;
     row-gap: 20px;
     margin-bottom: 30px;
+
     .item {
       .itemimage {
         width: 320px;
       }
+
       .itemname {
         margin-top: 15px;
         max-width: 320px;
@@ -173,9 +204,10 @@ const teamMembers = ref([
       }
     }
   }
+
   .bottom {
     .bottom_title {
-      font-family: "Poppins", sans-serif;
+    font-family: Inter, Tahoma, sans-serif;
       font-size: 20px;
       font-weight: 500;
       line-height: 40.4px;
@@ -183,8 +215,9 @@ const teamMembers = ref([
       color: #ff9633;
       margin-bottom: 0px;
     }
+
     .bottom_text {
-      font-family: "Poppins", sans-serif;
+    font-family: Inter, Tahoma, sans-serif;
       font-size: 14px;
       font-weight: 400;
       line-height: 22.2px;
@@ -192,7 +225,7 @@ const teamMembers = ref([
       color: #414141;
 
       span {
-        font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
         font-size: 14px;
         line-height: 22.2px;
         text-align: left;
@@ -201,5 +234,3 @@ const teamMembers = ref([
   }
 }
 </style>
-  
-  

@@ -116,11 +116,9 @@ export default defineComponent({
 }
 
 .inText {
-  font-family: Poppins, sans-serif;
-  font-weight: 700;
-  line-height: 19.6px;
-  font-size: 4rem;
-  letter-spacing: -0.05em;
+font-family: Inter, Tahoma, sans-serif;
+  font-weight: 600;
+  font-size: 35px;
   line-height: 1.1;
   text-align: center;
   color: #272f38;
@@ -131,16 +129,14 @@ export default defineComponent({
 }
 
 .AtText {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
+font-family: Inter, Tahoma, sans-serif;
+  font-weight: 400;
   line-height: 19.6px;
   color: #fffffb;
   margin-bottom: 65px;
   max-width: 500px;
-  font-size: 1.5rem;
-  letter-spacing: -0.08em;
-
-  line-height: 1.1;
+  font-size: 18px;
+  line-height: 1.4;
   text-align: left;
   color: #272f38;
 }
@@ -159,8 +155,7 @@ export default defineComponent({
 
 .LOytext {
   .numText {
-    font-family: "Poppins", sans-serif;
-    font-size: 18px;
+font-family: Inter, Tahoma, sans-serif;    font-size: 18px;
     font-weight: 700;
     line-height: 19.6px;
     text-align: left;
@@ -168,8 +163,7 @@ export default defineComponent({
   }
 
   .LoyalText {
-    font-family: "Poppins", sans-serif;
-    font-size: 14px;
+font-family: Inter, Tahoma, sans-serif;    font-size: 14px;
     font-weight: 700;
     line-height: 14px;
     text-align: left;
@@ -237,10 +231,9 @@ export default defineComponent({
 }
 
 .footer-text {
-  margin-top: 20px;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
+  margin-top: 30px;
+font-family: Inter, Tahoma, sans-serif;  font-size: 18px;
+  font-weight: 400;
   line-height: 19.6px;
   color: #272f38;
 }

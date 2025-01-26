@@ -4,17 +4,17 @@
 </script>
 <template>
   <div class="home_view">
-    <SlideInContent> <Investing /></SlideInContent>
+    <SlideInContent id="Home"> <Investing /></SlideInContent>
     <div class="container">
-      <SlideInContent> <AboutUs /></SlideInContent>
-      <SlideInContent> <InvestmentPortfolio /></SlideInContent>
-      <SlideInContent> <Cryptocurrency/></SlideInContent>
-      <SlideInContent> <Market /></SlideInContent>
-      <SlideInContent> <Social /></SlideInContent>
-      <SlideInContent> <Media /></SlideInContent>
-      <SlideInContent> <AlphaFund /></SlideInContent>
-      <SlideInContent> <Advisory /></SlideInContent>
-      <SlideInContent> <IndustryNews /></SlideInContent>
+      <SlideInContent id="AboutUs"> <AboutUs /></SlideInContent>
+      <SlideInContent id="InvestmentPortfolio"> <InvestmentPortfolio /></SlideInContent>
+      <SlideInContent id="Invest"> <Cryptocurrency/></SlideInContent>
+      <SlideInContent id="MarketInsights"> <Market /></SlideInContent>
+      <SlideInContent id="SocialImpact"> <Social /></SlideInContent>
+      <SlideInContent id="MediaCoverage"> <Media /></SlideInContent>
+      <SlideInContent id="BrillianceCorporation"> <AlphaFund /></SlideInContent>
+      <SlideInContent id="Advisoryteam"> <Advisory /></SlideInContent>
+      <SlideInContent id="IndustryNews"> <IndustryNews /></SlideInContent>
     </div>
   </div>
 </template>

@@ -41,9 +41,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
+import { ref } from "vue"
 
-const hoveredIndex = ref<number | null>(-1); // state for holding the hovered card index
+const hoveredIndex = ref<number | null>(-1) // state for holding the hovered card index
 
 // About Us cards content
 const aboutUsContent = ref([
@@ -65,7 +65,7 @@ const aboutUsContent = ref([
     content:
       "To discover and support change-makers in the technology sector and to build an inclusive and intelligent global financial ecosystem.",
   },
-]);
+])
 </script>
 
 <style scoped lang="less">
@@ -78,28 +78,28 @@ const aboutUsContent = ref([
   border-bottom: 1px solid #d9d9d9;
 }
 .title {
-  font-family: PingFang SC;
-  font-size: 40px;
+  font-family: Inter, Tahoma, sans-serif;
+  font-size: 34px;
   font-weight: 500;
-  line-height: 56px;
+  line-height: 40px;
   text-align: center;
   color: #ff9633;
-  
-  margin-bottom: 100px;
+
+  margin-bottom: 80px;
 }
 .AboutUs_Content {
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   .content_text {
-    font-family: PingFang SC;
-    font-size: 28px;
+    font-family: Inter, Tahoma, sans-serif;
+    font-size: 18px;
     font-weight: 400;
     line-height: 39.2px;
     text-align: left;
     color: #414141;
 
     span {
-      font-family: PingFang SC;
-      font-size: 28px;
+      font-family: Inter, Tahoma, sans-serif;
+      font-size: 18px;
       font-weight: 600;
       line-height: 39.2px;
       text-align: left;
@@ -138,8 +138,8 @@ const aboutUsContent = ref([
       left: 30px;
     }
     .itemtitle {
-      font-family: PingFang SC;
-      font-size: 30px;
+      font-family: Inter, Tahoma, sans-serif;
+      font-size: 22px;
       font-weight: 600;
       line-height: 42px;
       text-align: center;
@@ -149,8 +149,8 @@ const aboutUsContent = ref([
     .itemcontent {
       max-width: 360px;
       padding-top: 20px;
-      font-family: PingFang SC;
-      font-size: 22px;
+      font-family: Inter, Tahoma, sans-serif;
+      font-size: 18px;
       font-weight: 400;
       line-height: 30.8px;
       text-align: center;
@@ -232,4 +232,3 @@ const aboutUsContent = ref([
   }
 }
 </style>
-

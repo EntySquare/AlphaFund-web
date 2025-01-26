@@ -5,14 +5,21 @@
 
       <div class="title">Media Coverage</div>
       <div class="Media_Content">
-        <div v-for="(member, index) in teamMembers" :key="index" class="item">
+        <div v-for="(member, index) in teamMembers" :key="index" class="item" @click="clickURL(member.url)">
           <LINE lineWidth="810px">
             <template #image>
               <img :src="member.image" class="itemimage" />
             </template>
             <!-- 文字插槽 -->
             <template #text>
-              <div class="itemname" v-html="member.title"></div>
+              <el-popover v-if="index === 4" placement="bottom" :width="310" trigger="hover"
+                :content="member.title">
+                <template #reference>
+                  <div class="itemname" v-html="member.title"></div>
+
+                </template>
+              </el-popover>
+              <div class="itemname" v-else v-html="member.title"></div>
             </template>
           </LINE>
           <!-- <img :src="member.image" class="itemimage" />
@@ -29,36 +36,46 @@ import { ref } from "vue";
 // Team Members
 const teamMembers = ref([
   {
-    image: "/src/assets/img/Industry1.png",
+    image: "/src/assets/img/me1.png",
+    url:'http://financial.yxwbd.top/news/1952.html',
     title:
-      "<span style='font-weight:600;'>Research:</span> The Far-Reaching Impact of Generative AI on Global Financial Markets",
+      "Brilliance Team Leading the Wave of AI Healthcare Investments",
   },
   {
-    image: "/src/assets/img/Industry1.png",
+    image: "/src/assets/img/me2.png",
+    url:'http://www.globalpapertimes.com/news/2098.html',
     title:
-      "<span style='font-weight:600;'>Research:</span> The Synergistic Development of AI and Blockchain Technology",
+      "A Clean Energy Model from a Global Investment Perspective: The Rise of Northvolt",
   },
   {
-    image: "/src/assets/img/Industry1.png",
+    image: "/src/assets/img/me3.png",
+    url:'http://www.hlitechnology.com/news/1777.html',
     title:
-      "<span style='font-weight:600;'>Research:</span> AI Market Trends and Future: A Global Perspective and Regional Analysis",
+      "Brilliance Team Forms Partnership with Renowned Research Institution ETH Zurich",
   },
   {
-    image: "/src/assets/img/Industry1.png",
+    image: "/src/assets/img/me4.png",
+    url:'http://www.newstrackings.cc/news/295.html',
     title:
-      "<span style='font-weight:600;'>Research:</span> Analysis of AI Talent Supply and Market Demand",
+      "A New Milestone in Education Equity: Brilliance Team Invests in Digital Learning",
   },
   {
-    image: "/src/assets/img/Industry1.png",
+    image: "/src/assets/img/me5.png",
+    url:'http://markets.zmssw.cc/news/2040.html',
     title:
-      "<span style='font-weight:600;'>Research:</span> Analysis of Success Factors for Early Unicorn Projects",
+      "The New Era of Autonomous Driving: Brilliance Team Accelerates RoadAI's Technological Breakthrough",
   },
   {
-    image: "/src/assets/img/Industry1.png",
+    image: "/src/assets/img/me6.png",
+    url:'http://www.netitimes.com/news/1912.html',
     title:
-      "<span style='font-weight:600;'>Research:</span> Technological Innovation in Sustainable Development: An Analysis of Opportunities and Challenges",
+      "Brilliance Team Partners with Anthropic to Advance Responsible AI Development",
   },
 ]);
+const clickURL = (url:string)=>{
+   window.open(url, '_blank'); // Open URL in a new tab
+
+}
 </script>
   
   <style scoped lang="less">
@@ -73,7 +90,7 @@ const teamMembers = ref([
 }
 .title {
   font-family: "Poppins", sans-serif;
-  font-size: 40px;
+font-size: 34px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
@@ -90,17 +107,24 @@ const teamMembers = ref([
   .item {
     .itemimage {
       width: 360px;
-      height: auto;
+      height: 204px;
     }
     .itemname {
       margin-top: 30px;
       max-width: 360px;
       font-family: "Poppins", sans-serif;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 28px;
       text-align: left;
       color: #000;
+
+       display: -webkit-box;
+      -webkit-line-clamp: 2;
+      /* 显示两行 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }

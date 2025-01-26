@@ -9,15 +9,15 @@
             </div>
           </router-link>
 
-          <router-link to="/" class="nav-items" v-if="windowWidth > 824">
+          <a :href="item.to" class="nav-items" v-if="windowWidth > 824" v-for="item in navItems"
+              :key="item.to">
             <span
-              v-for="item in navItems"
-              :key="item"
+              
               class="nav-item Fon24-500"
             >
-              {{ item }}
+              {{ item.text }}
             </span>
-          </router-link>
+          </a>
           <div v-else @click="handleClick">
             <svg
               t="1737026939565"
@@ -67,11 +67,12 @@
         </div>
       </div>
       <div class="drawer-content1">
-        <ul v-for="(item, index) in navItems" :key="item">
-          <li :style="getItemStyle(index)" class="drawer-item">
-            {{ item }}
-          </li>
-          <div class="line" v-if="index < navItems.length - 1"></div>
+        <ul v-for="(item, index) in navItems" :key="item.to">
+        <a  @click="handleClickLInk(item.to, index)"> <li :style="getItemStyle(index)" class="drawer-item">
+            {{ item.text }}
+          </li></a>
+         
+          <!-- <div class="line" v-if="index < navItems.length - 1"></div> -->
         </ul>
       </div>
     </div>
@@ -82,14 +83,30 @@
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 // 导航项列表
 const navItems = ref([
-  "Home",
-  "About Us",
-  "Investment Portfolio",
-  "Social Impact",
-  "Contact Us",
+{
+text:"Home",
+to:'#Home'
+},
+{
+text:  "About Us",
+to:'#AboutUs'
+},
+{
+text:"Investment Portfolio",
+to:'#InvestmentPortfolio'
+},
+{
+text:"Social Impact",
+to:'#SocialImpact'
+},
+{
+text:  "Contact Us",
+to:'#ContactUs'
+},
 ]);
 
 import { useWindowSize } from "@/utils/useWindowSize";
+import { text } from "stream/consumers";
 
 //动态获取窗口大小
 const { windowWidth } = useWindowSize();
@@ -126,7 +143,16 @@ const menuState = ref(0); // 菜单状态：0=，1—，2X，3>
 const handleClick = () => {
   isDrawerOpen.value = true; // 打开抽屉
 };
+const handleClickLInk = (target: string, index: number) => {
+      // 1. 滚动到目标位置
+      const element = document.querySelector(target);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
 
+      // 2. 关闭抽屉
+      isDrawerOpen.value = false;
+    };
 // 抽屉中的内容
 
 // 动态计算动画延迟
@@ -197,6 +223,9 @@ const getItemStyle = (index: number) => {
       align-items: center;
       gap: 118px;
     }
+      .nav-item:hover {
+    color: #ff9633; /* 设置鼠标悬停时的颜色为红色 */
+  }
   }
   .right-side {
     display: flex;
@@ -337,7 +366,7 @@ const getItemStyle = (index: number) => {
 }
 
 .drawer-item {
-  margin: 10px 0;
+  margin: 30px 0;
   opacity: 0;
   transform: translateX(40px) translateY(-40px);
 

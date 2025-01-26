@@ -57,7 +57,7 @@ const teamMembers = ref([
 }
 .title {
   font-family: "Poppins", sans-serif;
-  font-size: 40px;
+font-size: 34px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
@@ -95,7 +95,7 @@ const teamMembers = ref([
           max-width: 200px;
 
       font-family: "Poppins", sans-serif;
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 600;
       line-height: 42px;
       text-align: center;
@@ -105,7 +105,7 @@ const teamMembers = ref([
     .itemposition {
       max-width: 200px;
       font-family: "Poppins", sans-serif;
-      font-size: 20px;
+      font-size: 14px;
       font-weight: 500;
       line-height: 28px;
       text-align: center;
@@ -156,12 +156,12 @@ const teamMembers = ref([
     }
     .itemname {
           max-width: 170px;
-      font-size: 26px;
+      font-size: 20px;
       margin-bottom: 22px;
     }
     .itemposition {
       max-width: 170px;
-      font-size: 18px;
+      font-size: 14px;
       font-weight: 500;
     }
   }
@@ -213,12 +213,12 @@ const teamMembers = ref([
         margin-bottom: 0px;
       }
       .itemname {
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 0px;
       }
       .itemposition {
         max-width: 100%;
-        font-size: 14px;
+        font-size: 12px;
       }
     }
   }

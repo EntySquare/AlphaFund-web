@@ -57,6 +57,8 @@ const handleMouseLeave = () => {
   position: relative;
   width: 100%;
   overflow: hidden;
+      box-shadow: 0 1px 15px rgba(0, 0, 0, 0.4);
+      border-radius: 4px;
 
   .line {
     position: absolute;

@@ -29,7 +29,6 @@ const { windowWidth } = useWindowSize();
           <div class="navSpecial">
             <div class="nav">
               <div class="navTitle">Contact</div>
-              <div class="navText">+123-456-7890</div>
               <div class="navText">info@alphafund.com</div>
               <div class="navText">Online Contact Form</div>
             </div>
@@ -39,14 +38,19 @@ const { windowWidth } = useWindowSize();
             </div>
           </div>
           <div class="nav">
-            <div class="navTitle">Explore</div>
-            <div class="navText">Home</div>
-            <div class="navText">About us</div>
-            <div class="navText">Investment Portfolio</div>
-            <div class="navText">Market Insights</div>
-            <div class="navText">Social Impact</div>
-            <div class="navText">Media Coverage</div>
-            <div class="navText">Brilliance Corporation</div>
+
+
+            <div  class="navTitle">Explore</div>
+            <a href="#Home" class="navText">Home</a>
+            <a href="#AboutUs" class="navText">About us</a>
+            <a href="#InvestmentPortfolio" class="navText">Investment Portfolio</a>
+            <a href="#Invest" class="navText">Invest</a>
+            <a href="#MarketInsights" class="navText">Market Insights</a>
+            <a href="#SocialImpact" class="navText">Social Impact</a>
+            <a href="#MediaCoverage" class="navText">Media Coverage</a>
+            <a href="#BrillianceCorporation" class="navText">Brilliance Corporation</a>
+            <a href="#Advisoryteam" class="navText">Advisory team</a>
+            <a href="#IndustryNews" class="navText">industry News</a>
           </div>
           <div class="nav">
             <div class="navTitle">Support</div>
@@ -174,6 +178,7 @@ const { windowWidth } = useWindowSize();
       display: flex;
       flex-direction: column;
       gap: 15px;
+      
       .navTitle {
         margin-bottom: 10px;
         font-family: "Poppins", sans-serif;
@@ -190,7 +195,9 @@ const { windowWidth } = useWindowSize();
         line-height: 28px;
         text-align: left;
         color: #272f38;
-
+&:hover{
+color: #ff9633;
+}
       }
     }
   }

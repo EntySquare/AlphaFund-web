@@ -11,8 +11,6 @@ import Social from "./Social.vue";
 import AboutUs from "./AboutUs.vue";
 import InvestmentPortfolio from "./InvestmentPortfolio.vue";
 import Investing from "./Investing.vue";
-
-import echarts from "./echarts.vue";
 import Cryptocurrency from "./Cryptocurrency.vue"
 import Advisory from "./Advisory.vue"
 // 将全局组件封装到插件中
@@ -29,7 +27,6 @@ export default {
     Vue.component("Social", Social);
     Vue.component("AboutUs", AboutUs);
     Vue.component("InvestmentPortfolio", InvestmentPortfolio);
-    Vue.component('ECHARTS',echarts) 
         Vue.component('Cryptocurrency',Cryptocurrency) 
         Vue.component('Advisory',Advisory) 
 

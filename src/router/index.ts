@@ -16,6 +16,7 @@ let router = createRouter({
         { path: '', component: () => import('@/views/home/index.vue') },
       ]
     },
+        { path: '/pdf', component: () => import('@/components/pdf.vue') },
   ],
 
 })

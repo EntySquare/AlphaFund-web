@@ -8,14 +8,9 @@
         provide support for our investment decisions.
       </div>
       <div class="InvestmentPortfolio_Cards">
-        <div
-          v-for="(content, index) in InvestmentPortfolioContent"
-          :key="index"
-          class="item"
-          :class="{ hovered: hoveredIndex === index }"
-          @mouseover="hoveredIndex = index"
-          @mouseleave="hoveredIndex = -1"
-        >
+        <div v-for="(content, index) in InvestmentPortfolioContent" :key="index" class="item"
+          :class="{ hovered: hoveredIndex === index }" @mouseover="hoveredIndex = index"
+          @mouseleave="hoveredIndex = -1">
           <img :src="content.image" :alt="content.title" class="itemimage" />
           <div class="itemtitle">{{ content.title }}</div>
           <div class="itemcontent" v-html="content.content"></div>
@@ -23,7 +18,7 @@
       </div>
       <div class="Energy_Container">
         <div class="left_content">
-       
+
 
           <ul>
             <li>Artificial Intelligence: 40%</li>
@@ -34,9 +29,9 @@
           </ul>
         </div>
         <div class="right_content">
-       <div style="width: 100%; height: 100%;display: flex;align-items: center;justify-content: center;">
+          <div style="width: 100%; height: 100%;display: flex;align-items: center;justify-content: center;">
             <!-- 饼图容器 -->
-    <v-chart :option="chartOptions" class="chart" ></v-chart>
+            <v-chart :option="chartOptions" class="chart"></v-chart>
           </div>
           <!-- <div class="pie-chart">
             <img src="/src/assets/img/pieChart.png" alt="Pie Chart" />
@@ -150,29 +145,32 @@ const chartOptions = {
   padding: 0 120px;
   width: 100%;
 }
+
 .container {
   padding: 100px 0;
   border-bottom: 1px solid #d9d9d9;
 }
+
 .title {
-  font-family: "Poppins", sans-serif;
-  font-size: 40px;
+  font-family: Inter, Tahoma, sans-serif;
+ font-size: 34px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
   color: #ff9633;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
+
 .content_text {
-  font-family: "Poppins", sans-serif;
-  font-size: 24px;
+  font-family: Inter, Tahoma, sans-serif;
+  font-size: 20px;
   font-weight: 400;
   line-height: 33.6px;
   text-align: center;
   color: #414141;
-  margin-bottom: 100px;
-  padding: 0px 100px;
+  margin-bottom: 80px;
 }
+
 .InvestmentPortfolio_Cards {
   width: 100%;
   display: flex;
@@ -180,34 +178,39 @@ const chartOptions = {
   flex-wrap: wrap;
   gap: 30px;
   row-gap: 30px;
+
   .item {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 0px;
-    width: 375px;
-    height: 484px;
+    width: 345px;
+    height: 434px;
+
     .itemimage {
       width: 100px;
       height: 100px;
-      margin: 40px 0px;
+      margin-top: 40px;
+      // margin: 40px 0px;
     }
+
     .itemtitle {
-      font-family: "Poppins", sans-serif;
-      font-size: 30px;
+      font-family: Inter, Tahoma, sans-serif;
+      font-size: 20px;
       font-weight: 600;
       line-height: 42px;
       text-align: center;
       color: #414141;
-      margin-bottom: 22px;
+      // margin-bottom: 22px;
       padding: 30px 0px;
     }
+
     .itemcontent {
       max-width: 360px;
-      padding-top: 20px;
-      font-family: "Poppins", sans-serif;
-      font-size: 22px;
+      padding-top: 16px;
+      font-family: Inter, Tahoma, sans-serif;
+      font-size: 16px;
       font-weight: 400;
       line-height: 30.8px;
       text-align: center;
@@ -215,6 +218,7 @@ const chartOptions = {
       padding: 0px 40px;
     }
   }
+
   .item:hover {
     background: linear-gradient(to bottom, white 1%, #f6f6f6 99%);
     transition: background 0.4s ease-in-out;
@@ -222,6 +226,7 @@ const chartOptions = {
     box-shadow: 0px 0px 4px 0px #0000001a;
   }
 }
+
 .Energy_Container {
   width: 100%;
   // height: 565px;
@@ -229,7 +234,8 @@ const chartOptions = {
   flex: column;
 
   align-items: center;
-  margin-top: 100px;
+  margin-top: 10px;
+
   .left_content {
     width: 50%;
     display: flex;
@@ -243,14 +249,15 @@ const chartOptions = {
       text-align: center;
       flex-direction: column;
     }
+
     li {
-      font-family: "Poppins", sans-serif;
-      font-size: 30px;
+      font-family: Inter, Tahoma, sans-serif;
+      font-size: 20px;
       font-weight: 500;
       line-height: 42px;
       text-align: start;
       color: #414141;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
   }
 
@@ -260,11 +267,13 @@ const chartOptions = {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     // position: relative;
     .chart {
       height: 600px;
       width: 600px;
     }
+
     .pie-chart {
       width: 100%;
       position: relative;
@@ -288,7 +297,7 @@ const chartOptions = {
       display: flex;
       border-radius: 3px;
       border: 1px solid #cfcfcf;
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       background-color: white;
       flex-direction: column;
       justify-content: center;
@@ -305,7 +314,7 @@ const chartOptions = {
       display: flex;
       border-radius: 3px;
       border: 1px solid #cfcfcf;
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       background-color: white;
       flex-direction: column;
       justify-content: center;
@@ -322,7 +331,7 @@ const chartOptions = {
       display: flex;
       border-radius: 3px;
       border: 1px solid #cfcfcf;
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       background-color: white;
       flex-direction: column;
       justify-content: center;
@@ -350,6 +359,7 @@ const chartOptions = {
       right: 7%;
       z-index: 2;
     }
+
     .downRectangle {
       display: flex;
       position: absolute;
@@ -359,7 +369,7 @@ const chartOptions = {
     }
 
     .percentage-box {
-      font-family: Inter;
+font-family: Inter, Tahoma, sans-serif;
       font-size: 1.5rem;
       font-weight: 600;
       line-height: 29.05px;
@@ -370,7 +380,7 @@ const chartOptions = {
     }
 
     .label {
-      font-family: Iowan Old Style;
+font-family: Inter, Tahoma, sans-serif;
       font-size: 1.05rem;
       font-weight: 400;
       line-height: 30.04px;
@@ -388,14 +398,17 @@ const chartOptions = {
     padding: 0 100px;
   }
 }
+
 @media (max-width: 1380px) {
   .InvestmentPortfolio {
     padding: 0 60px;
   }
 }
+
 @media (max-width: 1220px) {
   .InvestmentPortfolio {
     padding: 0 60px;
+
     .Energy_Container {
       width: 100%;
       display: flex;
@@ -404,12 +417,14 @@ const chartOptions = {
       align-items: center;
       margin-top: 100px;
       margin-bottom: 150px;
+
       .left_content {
         width: 100%;
         display: flex;
         text-align: center;
         flex-direction: column;
         padding-left: 20px;
+
         ul {
           list-style-type: none;
           display: flex;
@@ -417,8 +432,9 @@ const chartOptions = {
           flex-direction: column;
           justify-content: center;
         }
+
         li {
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: 24px;
           font-weight: 500;
           line-height: 20px;
@@ -427,6 +443,7 @@ const chartOptions = {
           margin-bottom: 50px;
         }
       }
+
       .right_content {
         width: 100%;
         display: flex;
@@ -434,6 +451,7 @@ const chartOptions = {
         align-items: center;
         flex-direction: column;
         position: relative;
+
         .chart {
           height: 600px;
           width: 100%;
@@ -442,6 +460,7 @@ const chartOptions = {
           align-items: center;
           flex-direction: column;
         }
+
         .pie-chart {
           width: 100%;
           position: relative;
@@ -465,7 +484,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -482,7 +501,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -499,7 +518,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -527,6 +546,7 @@ const chartOptions = {
           right: 7%;
           z-index: 2;
         }
+
         .downRectangle {
           display: flex;
           position: absolute;
@@ -536,7 +556,7 @@ const chartOptions = {
         }
 
         .percentage-box {
-          font-family: Inter;
+font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(20px, 1vw, 18px);
           font-weight: 600;
           text-align: center;
@@ -547,7 +567,7 @@ const chartOptions = {
         }
 
         .label {
-          font-family: Iowan Old Style;
+font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(13px, 1vw, 16px);
           font-weight: 400;
           text-align: center;
@@ -565,6 +585,7 @@ const chartOptions = {
 @media (max-width: 1000px) {
   .InvestmentPortfolio {
     padding: 0 20px;
+
     .Energy_Container {
       width: 100%;
       display: flex;
@@ -573,12 +594,14 @@ const chartOptions = {
       align-items: center;
       margin-top: 100px;
       margin-bottom: 100px;
+
       .left_content {
         width: 100%;
         display: flex;
         text-align: center;
         flex-direction: column;
         padding-left: 20px;
+
         ul {
           list-style-type: none;
           display: flex;
@@ -586,8 +609,9 @@ const chartOptions = {
           flex-direction: column;
           justify-content: center;
         }
+
         li {
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: 24px;
           font-weight: 500;
           line-height: 20px;
@@ -596,6 +620,7 @@ const chartOptions = {
           margin-bottom: 50px;
         }
       }
+
       .right_content {
         width: 100%;
         display: flex;
@@ -626,7 +651,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -644,7 +669,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -661,7 +686,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -689,6 +714,7 @@ const chartOptions = {
           right: 7%;
           z-index: 2;
         }
+
         .downRectangle {
           display: flex;
           position: absolute;
@@ -698,7 +724,7 @@ const chartOptions = {
         }
 
         .percentage-box {
-          font-family: Inter;
+font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(16px, 1vw, 16px);
           font-weight: 600;
           text-align: center;
@@ -709,7 +735,7 @@ const chartOptions = {
         }
 
         .label {
-          font-family: Iowan Old Style;
+font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(11px, 1vw, 14px);
           font-weight: 400;
           text-align: center;
@@ -727,13 +753,16 @@ const chartOptions = {
 @media (max-width: 824px) {
   .InvestmentPortfolio {
     padding: 0 20px;
+
     .container {
       padding: 50px 0;
     }
+
     .title {
       font-size: 25px;
       margin-bottom: 100px;
     }
+
     .content_text {
       font-size: 16px;
       line-height: 24.2px;
@@ -742,6 +771,7 @@ const chartOptions = {
       text-align: start;
       padding: 0px;
     }
+
     .InvestmentPortfolio_Cards {
       flex-direction: column;
       align-items: center;
@@ -764,11 +794,13 @@ const chartOptions = {
           height: 70px;
           margin: 20px 0px;
         }
+
         .itemtitle {
           font-size: 20px;
           line-height: 22px;
           margin-bottom: 0;
         }
+
         .itemcontent {
           padding-top: 0px;
           font-size: 14px;
@@ -777,6 +809,7 @@ const chartOptions = {
         }
       }
     }
+
     .Energy_Container {
       width: 100%;
       display: flex;
@@ -785,12 +818,14 @@ const chartOptions = {
       align-items: center;
       margin-top: 100px;
       margin-bottom: 00px;
+
       .left_content {
         width: 100%;
         display: flex;
         text-align: center;
         flex-direction: column;
         padding-left: 20px;
+
         ul {
           list-style-type: none;
           display: flex;
@@ -798,8 +833,9 @@ const chartOptions = {
           flex-direction: column;
           justify-content: center;
         }
+
         li {
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: 20px;
           font-weight: 500;
           line-height: 10px;
@@ -808,6 +844,7 @@ const chartOptions = {
           margin-bottom: 50px;
         }
       }
+
       .right_content {
         width: 100%;
         display: flex;
@@ -839,7 +876,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -856,7 +893,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -873,7 +910,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -901,6 +938,7 @@ const chartOptions = {
           right: 7%;
           z-index: 2;
         }
+
         .downRectangle {
           display: flex;
           position: absolute;
@@ -910,7 +948,7 @@ const chartOptions = {
         }
 
         .percentage-box {
-          font-family: Inter;
+font-family: Inter, Tahoma, sans-serif;
           font-weight: 600;
           line-height: 18px;
 
@@ -918,7 +956,7 @@ const chartOptions = {
         }
 
         .label {
-          font-family: Iowan Old Style;
+font-family: Inter, Tahoma, sans-serif;
           font-size: 1vw;
           font-weight: 400;
           line-height: 18px;
@@ -927,6 +965,7 @@ const chartOptions = {
         }
       }
     }
+
     //   .Energy_Container{
     //     width: 100%;
     //     display: flex;
@@ -949,8 +988,7 @@ const chartOptions = {
     //       justify-content: center;
     //     }
     //     li {
-    //       font-family: "Poppins", sans-serif;
-    //       font-size: 30px;
+    //     font-family: Inter, Tahoma, sans-serif;    //       font-size: 30px;
     //       font-weight: 500;
     //       line-height: 42px;
     //       text-align: center;
@@ -986,8 +1024,7 @@ const chartOptions = {
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: "Poppins", sans-serif;
-    //   background-color: white;
+    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
     //   align-items: center;
@@ -1004,8 +1041,7 @@ const chartOptions = {
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: "Poppins", sans-serif;
-    //   background-color: white;
+    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
     //   align-items: center;
@@ -1021,8 +1057,7 @@ const chartOptions = {
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: "Poppins", sans-serif;
-    //   background-color: white;
+    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
     //   align-items: center;
@@ -1083,13 +1118,16 @@ const chartOptions = {
 @media (max-width: 756px) {
   .InvestmentPortfolio {
     padding: 0 20px;
+
     .container {
       padding: 50px 0;
     }
+
     .title {
       font-size: 25px;
       margin-bottom: 100px;
     }
+
     .content_text {
       font-size: 16px;
       line-height: 24.2px;
@@ -1098,6 +1136,7 @@ const chartOptions = {
       text-align: start;
       padding: 0px;
     }
+
     .InvestmentPortfolio_Cards {
       flex-direction: column;
       align-items: center;
@@ -1120,11 +1159,13 @@ const chartOptions = {
           height: 70px;
           margin: 20px 0px;
         }
+
         .itemtitle {
           font-size: 20px;
           line-height: 22px;
           margin-bottom: 0;
         }
+
         .itemcontent {
           padding-top: 0px;
           font-size: 14px;
@@ -1133,6 +1174,7 @@ const chartOptions = {
         }
       }
     }
+
     .Energy_Container {
       width: 100%;
       height: 50%;
@@ -1142,12 +1184,14 @@ const chartOptions = {
       align-items: center;
       margin-top: 100px;
       margin-bottom: 00px;
+
       .left_content {
         width: 100%;
         display: flex;
         text-align: center;
         flex-direction: column;
         padding-left: 20px;
+
         ul {
           list-style-type: none;
           display: flex;
@@ -1155,8 +1199,9 @@ const chartOptions = {
           flex-direction: column;
           justify-content: center;
         }
+
         li {
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: 20px;
           font-weight: 500;
           line-height: 10px;
@@ -1165,6 +1210,7 @@ const chartOptions = {
           margin-bottom: 50px;
         }
       }
+
       .right_content {
         width: 100%;
         display: flex;
@@ -1172,10 +1218,12 @@ const chartOptions = {
         align-items: center;
         flex-direction: column;
         position: relative;
+
         .chart {
           height: 350px;
           width: 350px;
         }
+
         .pie-chart {
           width: 100%;
           position: relative;
@@ -1199,7 +1247,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1216,7 +1264,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1233,7 +1281,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1261,6 +1309,7 @@ const chartOptions = {
           right: 7%;
           z-index: 2;
         }
+
         .downRectangle {
           display: flex;
           position: absolute;
@@ -1287,6 +1336,7 @@ const chartOptions = {
         }
       }
     }
+
     //   .Energy_Container{
     //     width: 100%;
     //     display: flex;
@@ -1309,8 +1359,7 @@ const chartOptions = {
     //       justify-content: center;
     //     }
     //     li {
-    //       font-family: "Poppins", sans-serif;
-    //       font-size: 30px;
+    //     font-family: Inter, Tahoma, sans-serif;    //       font-size: 30px;
     //       font-weight: 500;
     //       line-height: 42px;
     //       text-align: center;
@@ -1346,8 +1395,7 @@ const chartOptions = {
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: "Poppins", sans-serif;
-    //   background-color: white;
+    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
     //   align-items: center;
@@ -1364,8 +1412,7 @@ const chartOptions = {
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: "Poppins", sans-serif;
-    //   background-color: white;
+    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
     //   align-items: center;
@@ -1381,8 +1428,7 @@ const chartOptions = {
     //   display: flex;
     //   border-radius: 3px;
     //   border: 1px solid #CFCFCF;
-    //   font-family: "Poppins", sans-serif;
-    //   background-color: white;
+    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
     //   flex-direction: column;
     //   justify-content: center;
     //   align-items: center;
@@ -1444,13 +1490,16 @@ const chartOptions = {
 @media (max-width: 456px) {
   .InvestmentPortfolio {
     padding: 0 20px;
+
     .container {
       padding: 50px 0;
     }
+
     .title {
       font-size: 25px;
       margin-bottom: 100px;
     }
+
     .content_text {
       font-size: 16px;
       line-height: 24.2px;
@@ -1459,6 +1508,7 @@ const chartOptions = {
       text-align: start;
       padding: 0px;
     }
+
     .InvestmentPortfolio_Cards {
       flex-direction: column;
       align-items: center;
@@ -1481,11 +1531,13 @@ const chartOptions = {
           height: 70px;
           margin: 20px 0px;
         }
+
         .itemtitle {
           font-size: 20px;
           line-height: 22px;
           margin-bottom: 0;
         }
+
         .itemcontent {
           padding-top: 0px;
           font-size: 14px;
@@ -1494,6 +1546,7 @@ const chartOptions = {
         }
       }
     }
+
     .Energy_Container {
       width: 100%;
       height: 50%;
@@ -1503,12 +1556,14 @@ const chartOptions = {
       align-items: center;
       margin-top: 100px;
       margin-bottom: 00px;
+
       .left_content {
         width: 100%;
         display: flex;
         text-align: center;
         flex-direction: column;
         padding-left: 20px;
+
         ul {
           list-style-type: none;
           display: flex;
@@ -1516,8 +1571,9 @@ const chartOptions = {
           flex-direction: column;
           justify-content: center;
         }
+
         li {
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: 15px;
           font-weight: 500;
           line-height: 5px;
@@ -1526,6 +1582,7 @@ const chartOptions = {
           margin-bottom: 50px;
         }
       }
+
       .right_content {
         width: 100%;
         display: flex;
@@ -1533,10 +1590,12 @@ const chartOptions = {
         align-items: center;
         flex-direction: column;
         position: relative;
+
         .chart {
           height: 280px;
           width: 280px;
         }
+
         .pie-chart {
           width: 100%;
           position: relative;
@@ -1558,7 +1617,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1575,7 +1634,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1592,7 +1651,7 @@ const chartOptions = {
           display: flex;
           border-radius: 3px;
           border: 1px solid #cfcfcf;
-          font-family: "Poppins", sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           background-color: white;
           flex-direction: column;
           justify-content: center;
@@ -1620,6 +1679,7 @@ const chartOptions = {
           right: 7%;
           z-index: 2;
         }
+
         .downRectangle {
           display: flex;
           position: absolute;
