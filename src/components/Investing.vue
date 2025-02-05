@@ -22,7 +22,7 @@
         </div>
 
         <div class="stats">
-          <img src="@/assets/img/Group.png" class="avatar" />
+          <img src="http://www.alphafound.cc/assets/img/Group.png" class="avatar" />
 
           <div class="LOytext">
             <div class="numText">1000w +</div>
@@ -84,8 +84,6 @@ export default defineComponent({
 }
 
 .Investing {
-  /* position: relative; */
-  /* background: url("@/assets/img/OpenBg.png") no-repeat; */
   background-size: cover;
   height: 735px;
   display: flex;
@@ -272,7 +270,7 @@ font-family: Inter, Tahoma, sans-serif;  font-size: 18px;
 @media (max-width: 824px) {
   .Investing {
     height: 500px;
-    background: url("@/assets/img/homeBanner.png") no-repeat;
+    background: url("http://www.alphafound.cc/assets/img/homeBanner.png") no-repeat;
     background-size: cover;
   }
 
@@ -326,7 +324,7 @@ font-family: Inter, Tahoma, sans-serif;  font-size: 18px;
 @media (max-width: 460px) {
   .Investing {
     height: 500px;
-    background: url("@/assets/img/homeBanner.png") no-repeat;
+    background: url("http://www.alphafound.cc/assets/img/homeBanner.png") no-repeat;
     background-size: cover;
   }
 
@@ -393,8 +391,7 @@ font-family: Inter, Tahoma, sans-serif;  font-size: 18px;
   left: 0;
   right: 0;
   height: 100%;
-  // background: url("@/assets/img/homeBanner.png") center center no-repeat;
-  background: url("@/assets/img/bg.jpg") center center no-repeat;
+  background: url("http://www.alphafound.cc/assets/img/bg.jpg") center center no-repeat;
   background-size: cover;
 }
 </style>

@@ -5,7 +5,7 @@
         <div class="left-side">
           <router-link to="/">
             <div class="logo">
-              <img src="@/assets/img/logo.svg" alt="BeWater" />
+              <img src="http://www.alphafound.cc/assets/img/logo.svg" alt="BeWater" />
             </div>
           </router-link>
 
@@ -46,7 +46,7 @@
     >
       <div class="drawerTop">
         <div class="drawerToplogo">
-          <img src="@/assets/img/logo.svg" alt="BeWater" />
+          <img src="http://www.alphafound.cc/assets/img/logo.svg" alt="BeWater" />
         </div>
         <div @click="isDrawerOpen = false">
           <svg

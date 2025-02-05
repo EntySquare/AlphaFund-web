@@ -9,7 +9,7 @@ const { windowWidth } = useWindowSize();
       <div class="top">
         <div class="top_left">
           <div class="logo">
-            <img src="@/assets/img/logo.svg" alt="BeWater" />
+            <img src="http://www.alphafound.cc/assets/img/logo.svg" alt="BeWater" />
           </div>
           <div class="text" v-if="windowWidth > 824">
             To provide investors with stable returns，<br />
@@ -20,9 +20,9 @@ const { windowWidth } = useWindowSize();
             To provide investors with stable returns， Help them achieve long-term financial goals.
           </div>
           <div class="Links">
-            <img src="@/assets/img/in.png" alt="" />
-            <img src="@/assets/img/twi.png" alt="" />
-            <img src="@/assets/img/facebook.png" alt="" />
+            <!-- <img src="http://www.alphafound.cc/assets/img/in.png" alt="" />
+            <img src="http://www.alphafound.cc/assets/img/twi.png" alt="" />
+            <img src="http://www.alphafound.cc/assets/img/facebook.png" alt="" /> -->
           </div>
         </div>
         <div class="top_right">
@@ -60,7 +60,7 @@ const { windowWidth } = useWindowSize();
           </div>
         </div>
       </div>
-      <div class="bottom">版权信息：© 2023 AlphaFund. All rights reserved.</div>
+      <div class="bottom">版权信息：© 2020 AlphaFund. All rights reserved.</div>
     </div>
   </footer>
   <!-- <footer class="app_footer">

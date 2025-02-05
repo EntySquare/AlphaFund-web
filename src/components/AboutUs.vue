@@ -26,8 +26,8 @@
           <img
             :src="
               hoveredIndex === index
-                ? '/src/assets/img/ab5.png'
-                : '/src/assets/img/ab4.png'
+                ? 'http://www.alphafound.cc/assets/img/ab5.png'
+                : 'http://www.alphafound.cc/assets/img/ab4.png'
             "
             class="itemheadimg"
           />
@@ -48,19 +48,19 @@ const hoveredIndex = ref<number | null>(-1) // state for holding the hovered car
 // About Us cards content
 const aboutUsContent = ref([
   {
-    image: "/src/assets/img/ab1.png",
+    image: "http://www.alphafound.cc/assets/img/ab1.png",
     title: "Company Profile",
     content:
-      "<span style='font-weight:600;'>AlphaFund</span> was founded in 2005 and is committed to providing excellent asset management services to both individual and institutional investors",
+      "<span style='font-weight:600;'>AlphaFund</span> was founded in 2020 and is committed to providing excellent asset management services to both individual and institutional investors",
   },
   {
-    image: "/src/assets/img/ab2.png",
+    image: "http://www.alphafound.cc/assets/img/ab2.png",
     title: "Vision",
     content:
       "To drive human society toward a more innovative and sustainable future through the synergy of capital and technology.",
   },
   {
-    image: "/src/assets/img/ab3.png",
+    image: "http://www.alphafound.cc/assets/img/ab3.png",
     title: "Mission",
     content:
       "To discover and support change-makers in the technology sector and to build an inclusive and intelligent global financial ecosystem.",

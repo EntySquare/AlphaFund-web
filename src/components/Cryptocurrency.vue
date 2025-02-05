@@ -82,62 +82,62 @@ import { ref } from "vue"
 const cryptocurrencyData = [
   {
     project: "PEPE",
-    img: "/src/assets/img/cr1.png",
+    img: "http://www.alphafound.cc/assets/img/cr1.png",
     text: "$PEPE is a meme coin with no presale, zero tax, LP burn, and contract renouncement.",
   },
   {
     project: "Mantle",
-    img: "/src/assets/img/cr2.png",
+    img: "http://www.alphafound.cc/assets/img/cr2.png",
     text: "Mantle Network uses Ethereum Roll-up technology, supported by the Mantle Vault. The product and roadmap are fully governed by token holders. The Mantle token is the unified token used for products, governance, and the vault.",
   },
   {
     project: "Aave",
-    img: "/src/assets/img/cr3.png",
+    img: "http://www.alphafound.cc/assets/img/cr3.png",
     text: "Aave converted its platform token LEND to AAVE at a ratio of 100:1 on October 3, 2020 (block height 10978863). Aave is an open-source decentralized lending protocol that provides users with deposit and borrowing services.",
   },
   {
     project: "NEAR Protocol",
-    img: "/src/assets/img/cr4.png",
+    img: "http://www.alphafound.cc/assets/img/cr4.png",
     text: "NEAR Protocol is a highly scalable base protocol designed to support DApp operations quickly on mobile devices. NEAR Protocol allows developers to build mobile blockchain DApps and run them on users' native devices while providing developers with important information about DApps.",
   },
   {
     project: "Aptos",
-    img: "/src/assets/img/cr5.png",
+    img: "http://www.alphafound.cc/assets/img/cr5.png",
     text: "Aptos is an independent high-performance PoS Layer 1 project focused on providing the world's most secure and scalable Layer 1 blockchain.",
   },
   {
     project: "Filecoin",
-    img: "/src/assets/img/cr6.png",
+    img: "http://www.alphafound.cc/assets/img/cr6.png",
     text: "Filecoin is a token on IPFS, and Filecoin rewards miners by contributing idle hard drives.",
   },
   {
     project: "BitDAO",
-    img: "/src/assets/img/cr7.png",
+    img: "http://www.alphafound.cc/assets/img/cr7.png",
     text: "BitDAO is a new DAO supported by Peter Thiel, Founders Fund, Pantera, Dragonfly, Spartan, Bybit, and others.",
   },
   {
     project: "Injective Protocol",
-    img: "/src/assets/img/cr8.png",
+    img: "http://www.alphafound.cc/assets/img/cr8.png",
     text: "Injective Protocol is a layer-2 decentralized exchange protocol that enables decentralized cross-chain derivatives trading, unlocking the full potential of borderless decentralized finance.",
   },
   {
     project: "Optimism",
-    img: "/src/assets/img/cr9.png",
+    img: "http://www.alphafound.cc/assets/img/cr9.png",
     text: "Optimism is a low-cost, lightning-fast Ethereum Layer 2 blockchain. The Optimism ecosystem provides an overview of applications and integrations in the ecosystem.",
   },
   {
     project: "Sei",
-    img: "/src/assets/img/cr10.png",
+    img: "http://www.alphafound.cc/assets/img/cr10.png",
     text: "Sei is the first Layer 1 blockchain optimized for digital asset trading. SEI is the native token of the project.",
   },
   {
     project: "Ethereum Name Service",
-    img: "/src/assets/img/cr11.png",
+    img: "http://www.alphafound.cc/assets/img/cr11.png",
     text: "Ethereum Name Service (ENS) is a distributed, open, and scalable naming system based on the Ethereum blockchain.",
   },
   {
     project: "Render",
-    img: "/src/assets/img/cr12.png",
+    img: "http://www.alphafound.cc/assets/img/cr12.png",
     text: "The RNDR network is a peer-to-peer GPU computing network that connects creators in need of extra computing power to render scenes with providers who receive RNDR tokens for their GPU capabilities.",
   },
 ];
@@ -241,6 +241,8 @@ text-align: center;      color: #353535;
 
     gap: 20px;
     row-gap: 20px;
+    .contentItem{
+    width: 100%;}
   }
 }
 

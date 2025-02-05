@@ -21,34 +21,34 @@ import { ref } from "vue";
 // Team Members
 const teamMembers = ref([
   {
-    image: "/src/assets/img/al.png",
+    image: "http://www.alphafound.cc/assets/img/al.png",
     name: "Alexander Wilson",
     position: "Founder & CEO",
  
 
   },
   {
-    image: "/src/assets/img/al2.png",
+    image: "http://www.alphafound.cc/assets/img/al2.png",
     name: "Klaus Steiner",
     position: "CIO-Chief Investment Officer",
   },
   {
-    image: "/src/assets/img/al3.png",
+    image: "http://www.alphafound.cc/assets/img/al3.png",
     name: "Pierre Laurent",
     position: "CTO",
   },
   {
-    image: "/src/assets/img/al4.png",
+    image: "http://www.alphafound.cc/assets/img/al4.png",
     name: "Sophia Martinez",
     position: "COO",
   },
   {
-    image: "/src/assets/img/al5.png",
+    image: "http://www.alphafound.cc/assets/img/al5.png",
     name: "Matteo Rossi",
     position: "Director of European Operations",
   },
   {
-    image: "/src/assets/img/al6.png",
+    image: "http://www.alphafound.cc/assets/img/al6.png",
     name: "Amelia Zhang",
     position: "Director of CSR & Philanthropy",
   },

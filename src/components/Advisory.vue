@@ -21,24 +21,24 @@ import { ref } from "vue";
 // Team Members
 const teamMembers = ref([
   {
-    image: "/src/assets/img/ad1.png",
+    image: "http://www.alphafound.cc/assets/img/ad1.png",
     name: "이진섭",
     position: "Digital Asset Venture Capital Advisor",
  
 
   },
   {
-    image: "/src/assets/img/ad2.png",
+    image: "http://www.alphafound.cc/assets/img/ad2.png",
     name: "Sarah Thompson",
     position: "Wealth Management & Asset Allocation Consultant",
   },
   {
-    image: "/src/assets/img/ad3.png",
+    image: "http://www.alphafound.cc/assets/img/ad3.png",
     name: "Christopher Hughes",
     position: "AI & Technology Innovation Advisor",
   },
   {
-    image: "/src/assets/img/ad4.png",
+    image: "http://www.alphafound.cc/assets/img/ad4.png",
     name: "Maria Sanchez",
     position: "International Investment & Risk Management Consultant",
   },

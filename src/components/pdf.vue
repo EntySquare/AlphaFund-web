@@ -107,7 +107,7 @@ onMounted(() => {
 
 <style scoped>
 .pdf-viewer {
-  padding: 60px;
+  padding: 20px;
   width: 100vw;
   /* height: 1000px; */
 

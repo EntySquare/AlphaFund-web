@@ -36,37 +36,37 @@ import { ref } from "vue";
 // Team Members
 const teamMembers = ref([
   {
-    image: "/src/assets/img/me1.png",
+    image: "http://www.alphafound.cc/assets/img/me1.png",
     url:'http://financial.yxwbd.top/news/1952.html',
     title:
       "Brilliance Team Leading the Wave of AI Healthcare Investments",
   },
   {
-    image: "/src/assets/img/me2.png",
+    image: "http://www.alphafound.cc/assets/img/me2.png",
     url:'http://www.globalpapertimes.com/news/2098.html',
     title:
       "A Clean Energy Model from a Global Investment Perspective: The Rise of Northvolt",
   },
   {
-    image: "/src/assets/img/me3.png",
+    image: "http://www.alphafound.cc/assets/img/me3.png",
     url:'http://www.hlitechnology.com/news/1777.html',
     title:
       "Brilliance Team Forms Partnership with Renowned Research Institution ETH Zurich",
   },
   {
-    image: "/src/assets/img/me4.png",
+    image: "http://www.alphafound.cc/assets/img/me4.png",
     url:'http://www.newstrackings.cc/news/295.html',
     title:
       "A New Milestone in Education Equity: Brilliance Team Invests in Digital Learning",
   },
   {
-    image: "/src/assets/img/me5.png",
+    image: "http://www.alphafound.cc/assets/img/me5.png",
     url:'http://markets.zmssw.cc/news/2040.html',
     title:
       "The New Era of Autonomous Driving: Brilliance Team Accelerates RoadAI's Technological Breakthrough",
   },
   {
-    image: "/src/assets/img/me6.png",
+    image: "http://www.alphafound.cc/assets/img/me6.png",
     url:'http://www.netitimes.com/news/1912.html',
     title:
       "Brilliance Team Partners with Anthropic to Advance Responsible AI Development",

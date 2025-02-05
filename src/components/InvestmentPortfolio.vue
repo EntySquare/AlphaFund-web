@@ -34,22 +34,22 @@
             <v-chart :option="chartOptions" class="chart"></v-chart>
           </div>
           <!-- <div class="pie-chart">
-            <img src="/src/assets/img/pieChart.png" alt="Pie Chart" />
+            <img src="http://www.alphafound.cc/assets/img/pieChart.png" alt="Pie Chart" />
             <div class="rectangles">
               <div class="rightRectangle">
                 <img
-                  src="/src/assets/img/rightRectangle.png"
+                  src="http://www.alphafound.cc/assets/img/rightRectangle.png"
                   alt="left rectangle"
                 />
               </div>
               <div class="leftRectangle">
                 <img
-                  src="/src/assets/img/leftRectangle.png"
+                  src="http://www.alphafound.cc/assets/img/leftRectangle.png"
                   alt="right rectangle"
                 />
               </div>
               <div class="downRectangle">
-                <img src="/src/assets/img/rectangle.png" alt="down rectangle" />
+                <img src="http://www.alphafound.cc/assets/img/rectangle.png" alt="down rectangle" />
               </div>
 
               <div class="rectangular-box-energy">
@@ -81,17 +81,17 @@ const hoveredIndex = ref<number | null>(-1); // state for holding the hovered ca
 // About Us cards content
 const InvestmentPortfolioContent = ref([
   {
-    image: "/src/assets/img/ip1.png",
+    image: "http://www.alphafound.cc/assets/img/ip1.png",
     title: "Stock investment",
     content: "Focusing on high-quality stocks in high growth industries",
   },
   {
-    image: "/src/assets/img/ip2.png",
+    image: "http://www.alphafound.cc/assets/img/ip2.png",
     title: "Fixed income",
     content: "Provide stable cash flow and security assurance",
   },
   {
-    image: "/src/assets/img/ip3.png",
+    image: "http://www.alphafound.cc/assets/img/ip3.png",
     title: "Alternative investment",
     content:
       "Pursuing excess returns through channels such as hedge funds and private equity",

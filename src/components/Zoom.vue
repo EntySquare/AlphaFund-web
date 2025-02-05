@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, defineProps } from "vue";
+import { ref } from "vue";
 
 // 定义 props 接收图片路径和大小
 const props = defineProps<{

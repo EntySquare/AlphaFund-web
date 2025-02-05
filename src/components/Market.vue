@@ -39,44 +39,44 @@ import { ref } from "vue";
 // Team Members
 const teamMembers = ref([
   {
-    image: "/src/assets/img/Ma1.png",
+    image: "http://www.alphafound.cc/assets/img/Ma1.png",
     title:
       "Research: The Far-Reaching Impact of Generative AI on Global Financial Markets",
-    pdf: '/public/pdf/TheMarkets.pdf'
+    pdf: 'http://www.alphafound.cc/pdf/TheMarkets.pdf'
   },
   {
-    image: "/src/assets/img/Ma2.png",
+    image: "http://www.alphafound.cc/assets/img/Ma2.png",
     title:
       "Research: The Synergistic Development of AI and Blockchain Technology",
-    pdf: '/public/pdf/TheMarkets.pdf'
+    pdf: 'http://www.alphafound.cc/pdf/TheMarkets.pdf'
 
   },
   {
-    image: "/src/assets/img/Ma6.png",
+    image: "http://www.alphafound.cc/assets/img/Ma6.png",
     title:
       "Research: AI Market Trends and Future: A Global Perspective and Regional Analysis",
-    pdf: '/public/pdf/TheTechnology.pdf'
+    pdf: 'http://www.alphafound.cc/pdf/TheTechnology.pdf'
 
   },
   {
-    image: "/src/assets/img/Ma3.png",
+    image: "http://www.alphafound.cc/assets/img/Ma3.png",
     title:
       "Research: Analysis of AI Talent Supply and Market Demand",
-    pdf: '/public/pdf/AIMarket.pdf'
+    pdf: 'http://www.alphafound.cc/pdf/AIMarket.pdf'
 
   },
   {
-    image: "/src/assets/img/Ma4.png",
+    image: "http://www.alphafound.cc/assets/img/Ma4.png",
     title:
       "Research: Analysis of Success Factors for Early Unicorn Projects",
-    pdf: '/public/pdf/AnalysisProjects.pdf'
+    pdf: 'http://www.alphafound.cc/pdf/AnalysisProjects.pdf'
 
   },
   {
-    image: "/src/assets/img/Ma5.png",
+    image: "http://www.alphafound.cc/assets/img/Ma5.png",
     title:
       "Research: Technological Innovation in Sustainable Development: An Analysis of Opportunities and Challenges",
-    pdf: '/public/pdf/Technological.pdf'
+    pdf: 'http://www.alphafound.cc/pdf/Technological.pdf'
 
   },
 ]);

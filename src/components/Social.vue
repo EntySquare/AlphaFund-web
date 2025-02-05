@@ -38,32 +38,32 @@ import { ref } from "vue";
 // Team Members
 const teamMembers = ref([
   {
-    image: "/src/assets/img/Social1.png",
+    image: "http://www.alphafound.cc/assets/img/Social1.png",
     title: "Caring for Nigerian Children: Brilliance Team in Action",
     url: 'http://www.hollywoodinews.com/news/1871.html'
   },
   {
-    image: "/src/assets/img/Social2.png",
+    image: "http://www.alphafound.cc/assets/img/Social2.png",
     title: "나이지리아 아이들을 위한 희망의 손길: Brilliance Team의 Sunshine Classroom Project",
     url: 'http://news.financeweeks.com/news/804.html'
   },
   {
-    image: "/src/assets/img/Social3.png",
+    image: "http://www.alphafound.cc/assets/img/Social3.png",
     title: "愛をもって希望を伝える：Brilliance Team、アフリカの高齢者に焦点を当てる",
     url: "http://jp.globalpapertimes.com/news/740.html"
   },
   {
-    image: "/src/assets/img/Social4.png",
+    image: "http://www.alphafound.cc/assets/img/Social4.png",
     title: "  Spreading Hope with Love: Brilliance Team Focuses on Africa's Elderly Population",
     url: 'http://city.ulocaldaily.com/news/1810.html'
   },
   {
-    image: "/src/assets/img/Social5.png",
+    image: "http://www.alphafound.cc/assets/img/Social5.png",
     title: "사랑으로 희망을 전하다: Brilliance Team, 아프리카 노인들을 위한 지원 활동",
     url: 'http://health.medicaldailys.com/news/806.html'
   },
   {
-    image: "/src/assets/img/Social6.png",
+    image: "http://www.alphafound.cc/assets/img/Social6.png",
     title: "愛をもって希望を伝える：Brilliance Team、アフリカの高齢者に焦点を当てる",
     url: 'http://jp.globalpapertimes.com/news/740.html'
   },

@@ -2,12 +2,12 @@
 import { ref } from 'vue';
 
 const dataList = ref([
-  { text: "2024’s Biggest Moments in AI", img: '/src/assets/img/in1.png', url: 'https://www.kdnuggets.com/2024-biggest-moments-ai' },
-  { text: "OpenAI has created an AI model for longevity science", img: '/src/assets/img/in2.png', url: 'https://www.technologyreview.com/2025/01/17/1110086/openai-has-created-an-ai-model-for-longevity-science/' },
-  { text: "White House Announces $500B AI Data Center Infrastructure Build-Ou", img: '/src/assets/img/in3.png', url: 'https://insideainews.com/2025/01/21/white-house-announces-500b-ai-data-center-infrastructure-build-out/' },
-  { text: "Nvidia at CES: Omniverse Blueprint for Industry, Generative Physical AI, Access to Blackwells, Cosmos Model for Physical AI", img: '/src/assets/img/in4.png', url: 'https://insideainews.com/2025/01/07/nvidia-at-ces-omniverse-blueprint-for-industry-generative-physical-ai-access-to-blackwells-cosmos-model-for-physical-ai/' },
-  { text: "An Appetite for AI: Trends and Predictions for 2025", img: '/src/assets/img/in5.png', url: 'https://www.dataversity.net/an-appetite-for-ai-trends-and-predictions-for-2025/' },
-  { text: "AI & Big Data Expo Global 2025", img: '/src/assets/img/in6.png', url: 'https://datafloq.com/meet/ai-big-data-expo-global-2025/' },
+  { text: "2024’s Biggest Moments in AI", img: 'http://www.alphafound.cc/assets/img/in1.png', url: 'https://www.kdnuggets.com/2024-biggest-moments-ai' },
+  { text: "OpenAI has created an AI model for longevity science", img: 'http://www.alphafound.cc/assets/img/in2.png', url: 'https://www.technologyreview.com/2025/01/17/1110086/openai-has-created-an-ai-model-for-longevity-science/' },
+  { text: "White House Announces $500B AI Data Center Infrastructure Build-Ou", img: 'http://www.alphafound.cc/assets/img/in3.png', url: 'https://insideainews.com/2025/01/21/white-house-announces-500b-ai-data-center-infrastructure-build-out/' },
+  { text: "Nvidia at CES: Omniverse Blueprint for Industry, Generative Physical AI, Access to Blackwells, Cosmos Model for Physical AI", img: 'http://www.alphafound.cc/assets/img/in4.png', url: 'https://insideainews.com/2025/01/07/nvidia-at-ces-omniverse-blueprint-for-industry-generative-physical-ai-access-to-blackwells-cosmos-model-for-physical-ai/' },
+  { text: "An Appetite for AI: Trends and Predictions for 2025", img: 'http://www.alphafound.cc/assets/img/in5.png', url: 'https://www.dataversity.net/an-appetite-for-ai-trends-and-predictions-for-2025/' },
+  { text: "AI & Big Data Expo Global 2025", img: 'http://www.alphafound.cc/assets/img/in6.png', url: 'https://datafloq.com/meet/ai-big-data-expo-global-2025/' },
 ])
 const clickURL = (url: string) => {
   window.open(url, '_blank'); // Open URL in a new tab
