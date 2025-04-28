@@ -1,18 +1,43 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref } from "vue";
+import { useWindowSize } from "@/utils/useWindowSize";
+const { windowWidth } = useWindowSize();
 
 const dataList = ref([
-  { text: "2024’s Biggest Moments in AI", img: 'http://www.alphafound.cc/assets/img/in1.png', url: 'https://www.kdnuggets.com/2024-biggest-moments-ai' },
-  { text: "OpenAI has created an AI model for longevity science", img: 'http://www.alphafound.cc/assets/img/in2.png', url: 'https://www.technologyreview.com/2025/01/17/1110086/openai-has-created-an-ai-model-for-longevity-science/' },
-  { text: "White House Announces $500B AI Data Center Infrastructure Build-Ou", img: 'http://www.alphafound.cc/assets/img/in3.png', url: 'https://insideainews.com/2025/01/21/white-house-announces-500b-ai-data-center-infrastructure-build-out/' },
-  { text: "Nvidia at CES: Omniverse Blueprint for Industry, Generative Physical AI, Access to Blackwells, Cosmos Model for Physical AI", img: 'http://www.alphafound.cc/assets/img/in4.png', url: 'https://insideainews.com/2025/01/07/nvidia-at-ces-omniverse-blueprint-for-industry-generative-physical-ai-access-to-blackwells-cosmos-model-for-physical-ai/' },
-  { text: "An Appetite for AI: Trends and Predictions for 2025", img: 'http://www.alphafound.cc/assets/img/in5.png', url: 'https://www.dataversity.net/an-appetite-for-ai-trends-and-predictions-for-2025/' },
-  { text: "AI & Big Data Expo Global 2025", img: 'http://www.alphafound.cc/assets/img/in6.png', url: 'https://datafloq.com/meet/ai-big-data-expo-global-2025/' },
-])
+  {
+    text: "2024’s Biggest Moments in AI",
+    img: "http://www.alphafound.cc/assets/img/in1.png",
+    url: "https://www.kdnuggets.com/2024-biggest-moments-ai",
+  },
+  {
+    text: "OpenAI has created an AI model for longevity science",
+    img: "http://www.alphafound.cc/assets/img/in2.png",
+    url: "https://www.technologyreview.com/2025/01/17/1110086/openai-has-created-an-ai-model-for-longevity-science/",
+  },
+  {
+    text: "White House Announces $500B AI Data Center Infrastructure Build-Ou",
+    img: "http://www.alphafound.cc/assets/img/in3.png",
+    url: "https://insideainews.com/2025/01/21/white-house-announces-500b-ai-data-center-infrastructure-build-out/",
+  },
+  {
+    text: "Nvidia at CES: Omniverse Blueprint for Industry, Generative Physical AI, Access to Blackwells, Cosmos Model for Physical AI",
+    img: "http://www.alphafound.cc/assets/img/in4.png",
+    url: "https://insideainews.com/2025/01/07/nvidia-at-ces-omniverse-blueprint-for-industry-generative-physical-ai-access-to-blackwells-cosmos-model-for-physical-ai/",
+  },
+  {
+    text: "An Appetite for AI: Trends and Predictions for 2025",
+    img: "http://www.alphafound.cc/assets/img/in5.png",
+    url: "https://www.dataversity.net/an-appetite-for-ai-trends-and-predictions-for-2025/",
+  },
+  {
+    text: "AI & Big Data Expo Global 2025",
+    img: "http://www.alphafound.cc/assets/img/in6.png",
+    url: "https://datafloq.com/meet/ai-big-data-expo-global-2025/",
+  },
+]);
 const clickURL = (url: string) => {
-  window.open(url, '_blank'); // Open URL in a new tab
-
-}
+  window.open(url, "_blank"); // Open URL in a new tab
+};
 </script>
 
 <template>
@@ -22,35 +47,46 @@ const clickURL = (url: string) => {
 
       <div class="News">
         <div class="Media_Content">
-          <div v-for="(member, index) in dataList" :key="index" class="item" @click="clickURL(member.url)">
+          <div
+            v-for="(member, index) in dataList"
+            :key="index"
+            class="item"
+            @click="clickURL(member.url)"
+          >
             <LINE lineWidth="810px">
               <template #image>
                 <img :src="member.img" class="itemimage" />
               </template>
               <!-- 文字插槽 -->
               <template #text>
-               <el-popover v-if="index === 3" placement="bottom" :width="310" trigger="hover"
-                :content="member.text">
-                <template #reference>
-                  <div class="itemname" v-html="member.text"></div>
-
-                </template>
-              </el-popover>
-              <div class="itemname" v-else v-html="member.text"></div>
+                <el-popover
+                  v-if="index === 3"
+                  placement="bottom"
+                  :width="windowWidth > 890 ? '360px' : '260px'"
+                  trigger="hover"
+                  :content="member.text"
+                >
+                  <template #reference>
+                    <div class="itemname" v-html="member.text"></div>
+                  </template>
+                </el-popover>
+                <div class="itemname" v-else v-html="member.text"></div>
               </template>
             </LINE>
             <!-- <img :src="member.image" class="itemimage" />
           <div class="itemname" v-html="member.title"></div> -->
           </div>
         </div>
-
       </div>
       <div class="Open" id="ContactUs">
         <div class="openTitle">Grow with Us and Shape the Future!</div>
         <div class="openText">
-         Access resources, funding, and strategic support for your startup.
+          Access resources, funding, and strategic support for your startup.
         </div>
-        <div class="text">No matter what stage your business is in, we’re here to help you succeed. Contact us today and explore limitless opportunities!</div>
+        <div class="text">
+          No matter what stage your business is in, we’re here to help you
+          succeed. Contact us today and explore limitless opportunities!
+        </div>
         <div class="openButton">Contact Us</div>
       </div>
     </div>
@@ -58,18 +94,15 @@ const clickURL = (url: string) => {
 </template>
 
 <style scoped lang="less">
-.IndustryNews {
-  // width: 100%;
-}
-
 .container {
   padding: 100px 120px 200px 120px;
   width: 100%;
 }
 
 .title {
-  font-family: "Poppins", sans-serif;
-font-size: 34px;  font-weight: 500;
+  font-family: Inter, Tahoma, sans-serif;
+  font-size: 34px;
+  font-weight: 500;
   line-height: 56px;
   text-align: center;
   color: #ff9633;
@@ -100,8 +133,7 @@ font-size: 34px;  font-weight: 500;
       text-align: left;
       color: #000;
 
-      
-       display: -webkit-box;
+      display: -webkit-box;
       -webkit-line-clamp: 2;
       /* 显示两行 */
       -webkit-box-orient: vertical;
@@ -120,15 +152,13 @@ font-size: 34px;  font-weight: 500;
   gap: 30px;
   row-gap: 30px;
   margin-bottom: 200px;
-
-
 }
 
 .Open {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 70px 0;
+  padding: 70px 20px;
   flex-direction: column;
   background-color: #eaeaea;
   //background: #6d6d6dcc;
@@ -137,7 +167,7 @@ font-size: 34px;  font-weight: 500;
   border-radius: 31px;
 
   .openTitle {
-    font-family: "Poppins", sans-serif;
+    font-family: Inter, Tahoma, sans-serif;
     font-size: 30px;
     font-weight: 500;
     line-height: 56px;
@@ -146,7 +176,7 @@ font-size: 34px;  font-weight: 500;
   }
 
   .openText {
-    font-family: "Poppins", sans-serif;
+    font-family: Inter, Tahoma, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 28px;
@@ -155,8 +185,8 @@ font-size: 34px;  font-weight: 500;
     margin-top: 15px;
     margin-bottom: 30px;
   }
-  .text{
-  font-family: "Poppins", sans-serif;
+  .text {
+    font-family: Inter, Tahoma, sans-serif;
     font-size: 14px;
     font-weight: 400;
     line-height: 28px;
@@ -179,11 +209,50 @@ font-size: 34px;  font-weight: 500;
     text-align: center;
     text-transform: uppercase;
     transition: 0.2s ease-in-out;
-    font-family: "Poppins", sans-serif;
+    font-family: Inter, Tahoma, sans-serif;
     display: inline-block;
     line-height: 21px;
     box-shadow: 0px 8px 15px rgba(255, 150, 51, 0.5);
+    position: relative;
+    overflow: hidden;
   }
+  .openButton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(255, 150, 51, 0.5);
+  }
+
+  .openButton::after {
+    content: "";
+    position: absolute;
+    top: -120%;
+    left: -120%;
+    width: 250%;
+    height: 8px;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    transition: none;
+    opacity: 0;
+  }
+
+  .openButton:hover::after {
+    opacity: 1;
+    animation: diagonal-sparkle 2.5s ease-out forwards;
+  }
+  @keyframes diagonal-sparkle {
+  0% {
+    top: -100%;
+    left: -180%;
+  }
+  100% {
+    top: 100%;
+    left: 180%;
+  }
+}
 }
 
 @media (max-width: 1420px) {
@@ -246,12 +315,10 @@ font-size: 34px;  font-weight: 500;
         margin-bottom: 100px;
         gap: 30px;
         row-gap: 30px;
-
-
       }
 
       .Open {
-        padding: 30px 0;
+        padding: 30px 20px;
         border-radius: 21px;
 
         .openTitle {
@@ -284,7 +351,7 @@ font-size: 34px;  font-weight: 500;
       padding: 50px 20px 100px 20px;
 
       .Open {
-        padding: 30px 10px;
+        padding: 30px 20px;
         border-radius: 21px;
 
         .openTitle {

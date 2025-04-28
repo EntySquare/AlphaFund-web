@@ -31,7 +31,7 @@
             "
             class="itemheadimg"
           />
-          <img :src="content.image" :alt="content.title" class="itemimage" />
+          <img :src="content.image" class="itemimage" />
           <div class="itemtitle">{{ content.title }}</div>
           <div class="itemcontent" v-html="content.content"></div>
         </div>
@@ -41,9 +41,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue"
+import { ref } from "vue";
 
-const hoveredIndex = ref<number | null>(-1) // state for holding the hovered card index
+const hoveredIndex = ref<number | null>(-1); // state for holding the hovered card index
 
 // About Us cards content
 const aboutUsContent = ref([
@@ -65,7 +65,7 @@ const aboutUsContent = ref([
     content:
       "To discover and support change-makers in the technology sector and to build an inclusive and intelligent global financial ecosystem.",
   },
-])
+]);
 </script>
 
 <style scoped lang="less">
@@ -124,6 +124,7 @@ const aboutUsContent = ref([
     padding: 55px 30px 55px 30px;
     width: 375px;
     transition: background 0.4s ease;
+    cursor: pointer;
 
     .itemimage {
       width: 70px;

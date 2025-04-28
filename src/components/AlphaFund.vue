@@ -6,7 +6,7 @@
       <div class="title">AlphaFund Brilliance Corporation</div>
       <div class="AlphaFund_Content">
         <div v-for="(member, index) in teamMembers" :key="index" class="item">
-          <img :src="member.image" :alt="member.name" class="itemimage" />
+          <img :src="member.image" alt="" class="itemimage" />
           <div class="itemname">{{ member.name }}</div>
           <div class="itemposition">{{ member.position }}</div>
         </div>
@@ -24,8 +24,6 @@ const teamMembers = ref([
     image: "http://www.alphafound.cc/assets/img/al.png",
     name: "Alexander Wilson",
     position: "Founder & CEO",
- 
-
   },
   {
     image: "http://www.alphafound.cc/assets/img/al2.png",
@@ -65,8 +63,9 @@ const teamMembers = ref([
   border-bottom: 1px solid #d9d9d9;
 }
 .title {
-  font-family: "Poppins", sans-serif;
-font-size: 34px;  font-weight: 500;
+  font-family: Inter, Tahoma, sans-serif;
+  font-size: 34px;
+  font-weight: 500;
   line-height: 56px;
   text-align: center;
   color: #ff9633;
@@ -100,7 +99,7 @@ font-size: 34px;  font-weight: 500;
       margin-bottom: 30px;
     }
     .itemname {
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 20px;
       font-weight: 600;
       line-height: 42px;
@@ -110,7 +109,7 @@ font-size: 34px;  font-weight: 500;
     }
     .itemposition {
       max-width: 216px;
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 14px;
       font-weight: 500;
       line-height: 28px;

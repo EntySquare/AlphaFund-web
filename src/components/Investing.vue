@@ -22,7 +22,10 @@
         </div>
 
         <div class="stats">
-          <img src="http://www.alphafound.cc/assets/img/Group.png" class="avatar" />
+          <img
+            src="http://www.alphafound.cc/assets/img/Group.png"
+            class="avatar"
+          />
 
           <div class="LOytext">
             <div class="numText">1000w +</div>
@@ -114,7 +117,7 @@ export default defineComponent({
 }
 
 .inText {
-font-family: Inter, Tahoma, sans-serif;
+  font-family: Inter, Tahoma, sans-serif;
   font-weight: 600;
   font-size: 35px;
   line-height: 1.1;
@@ -127,7 +130,7 @@ font-family: Inter, Tahoma, sans-serif;
 }
 
 .AtText {
-font-family: Inter, Tahoma, sans-serif;
+  font-family: Inter, Tahoma, sans-serif;
   font-weight: 400;
   line-height: 19.6px;
   color: #fffffb;
@@ -153,7 +156,8 @@ font-family: Inter, Tahoma, sans-serif;
 
 .LOytext {
   .numText {
-font-family: Inter, Tahoma, sans-serif;    font-size: 18px;
+    font-family: Inter, Tahoma, sans-serif;
+    font-size: 18px;
     font-weight: 700;
     line-height: 19.6px;
     text-align: left;
@@ -161,7 +165,8 @@ font-family: Inter, Tahoma, sans-serif;    font-size: 18px;
   }
 
   .LoyalText {
-font-family: Inter, Tahoma, sans-serif;    font-size: 14px;
+    font-family: Inter, Tahoma, sans-serif;
+    font-size: 14px;
     font-weight: 700;
     line-height: 14px;
     text-align: left;
@@ -182,7 +187,7 @@ font-family: Inter, Tahoma, sans-serif;    font-size: 14px;
   text-align: center;
   text-transform: uppercase;
   transition: 0.2s ease-in-out;
-  font-family: "Poppins", sans-serif;
+  font-family: Inter, Tahoma, sans-serif;
   display: inline-block;
   line-height: 21px;
   position: relative;
@@ -230,7 +235,8 @@ font-family: Inter, Tahoma, sans-serif;    font-size: 14px;
 
 .footer-text {
   margin-top: 30px;
-font-family: Inter, Tahoma, sans-serif;  font-size: 18px;
+  font-family: Inter, Tahoma, sans-serif;
+  font-size: 18px;
   font-weight: 400;
   line-height: 19.6px;
   color: #272f38;
@@ -270,7 +276,8 @@ font-family: Inter, Tahoma, sans-serif;  font-size: 18px;
 @media (max-width: 824px) {
   .Investing {
     height: 500px;
-    background: url("http://www.alphafound.cc/assets/img/homeBanner.png") no-repeat;
+    background: url("http://www.alphafound.cc/assets/img/homeBanner.png")
+      no-repeat;
     background-size: cover;
   }
 
@@ -324,7 +331,8 @@ font-family: Inter, Tahoma, sans-serif;  font-size: 18px;
 @media (max-width: 460px) {
   .Investing {
     height: 500px;
-    background: url("http://www.alphafound.cc/assets/img/homeBanner.png") no-repeat;
+    background: url("http://www.alphafound.cc/assets/img/homeBanner.png")
+      no-repeat;
     background-size: cover;
   }
 
@@ -391,7 +399,8 @@ font-family: Inter, Tahoma, sans-serif;  font-size: 18px;
   left: 0;
   right: 0;
   height: 100%;
-  background: url("http://www.alphafound.cc/assets/img/bg.jpg") center center no-repeat;
+  background: url("http://www.alphafound.cc/assets/img/bg.jpg") center center
+    no-repeat;
   background-size: cover;
 }
 </style>

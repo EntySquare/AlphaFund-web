@@ -6,22 +6,30 @@
       <div class="title">Market Insights</div>
 
       <div class="Market_Content">
-        <div v-for="(member, index) in teamMembers" :key="index" class="item" @click="PDFClick(member.pdf)">
+        <div
+          v-for="(member, index) in teamMembers"
+          :key="index"
+          class="item"
+          @click="PDFClick(member.pdf)"
+        >
           <LINE lineWidth="810px">
             <template #image>
               <img :src="member.image" class="itemimage" />
             </template>
             <!-- 文字插槽 -->
             <template #text>
-              <el-popover v-if="index === 0 || index === 2 || index === 5" placement="bottom" :width="310" trigger="hover"
-                :content="member.title">
+              <el-popover
+                
+                placement="bottom"
+                :width="windowWidth > 890 ? '360px' : '260px'"
+                trigger="hover"
+                :content="member.title"
+              >
                 <template #reference>
                   <div class="itemname" v-html="member.title"></div>
-
                 </template>
               </el-popover>
-              <div class="itemname" v-if="index === 1 || index === 3 || index === 4" v-html="member.title"></div>
-
+              
             </template>
           </LINE>
           <!-- <img :src="member.image" class="itemimage" />
@@ -35,55 +43,51 @@
 <script lang="ts" setup>
 import router from "@/router";
 import { ref } from "vue";
-
+import { useWindowSize } from "@/utils/useWindowSize";
+const { windowWidth } = useWindowSize();
 // Team Members
 const teamMembers = ref([
   {
     image: "http://www.alphafound.cc/assets/img/Ma1.png",
     title:
       "Research: The Far-Reaching Impact of Generative AI on Global Financial Markets",
-    pdf: 'http://www.alphafound.cc/pdf/TheMarkets.pdf'
+    pdf: "http://www.alphafound.cc/pdf/TheMarkets.pdf",
   },
   {
     image: "http://www.alphafound.cc/assets/img/Ma2.png",
     title:
       "Research: The Synergistic Development of AI and Blockchain Technology",
-    pdf: 'http://www.alphafound.cc/pdf/TheMarkets.pdf'
-
+    pdf: "http://www.alphafound.cc/pdf/TheMarkets.pdf",
   },
   {
     image: "http://www.alphafound.cc/assets/img/Ma6.png",
     title:
       "Research: AI Market Trends and Future: A Global Perspective and Regional Analysis",
-    pdf: 'http://www.alphafound.cc/pdf/TheTechnology.pdf'
-
+    pdf: "http://www.alphafound.cc/pdf/TheTechnology.pdf",
   },
   {
     image: "http://www.alphafound.cc/assets/img/Ma3.png",
-    title:
-      "Research: Analysis of AI Talent Supply and Market Demand",
-    pdf: 'http://www.alphafound.cc/pdf/AIMarket.pdf'
-
+    title: "Research: Analysis of AI Talent Supply and Market Demand",
+    pdf: "http://www.alphafound.cc/pdf/AIMarket.pdf",
   },
   {
     image: "http://www.alphafound.cc/assets/img/Ma4.png",
-    title:
-      "Research: Analysis of Success Factors for Early Unicorn Projects",
-    pdf: 'http://www.alphafound.cc/pdf/AnalysisProjects.pdf'
-
+    title: "Research: Analysis of Success Factors for Early Unicorn Projects",
+    pdf: "http://www.alphafound.cc/pdf/AnalysisProjects.pdf",
   },
   {
     image: "http://www.alphafound.cc/assets/img/Ma5.png",
     title:
       "Research: Technological Innovation in Sustainable Development: An Analysis of Opportunities and Challenges",
-    pdf: 'http://www.alphafound.cc/pdf/Technological.pdf'
-
+    pdf: "http://www.alphafound.cc/pdf/Technological.pdf",
   },
 ]);
 
 const PDFClick = (url: string) => {
-  router.push({ path: '/pdf', query: { pdfUrl: url } }) // 传递查询参数
-}
+  // router.push({ path: "/pdf", query: { pdfUrl: url } }); // 传递查询参数
+  window.open(url, "_blank"); // Open URL in a new tab
+
+};
 </script>
 
 <style scoped lang="less">
@@ -99,7 +103,7 @@ const PDFClick = (url: string) => {
 }
 
 .title {
-  font-family: "Poppins", sans-serif;
+  font-family: Inter, Tahoma, sans-serif;
   font-size: 34px;
   font-weight: 500;
   line-height: 56px;
@@ -121,14 +125,14 @@ const PDFClick = (url: string) => {
 
     .itemimage {
       width: 360px;
-      height: auto;
+      height: 180px;
       border-radius: 4px;
     }
 
     .itemname {
       margin-top: 30px;
       max-width: 360px;
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 18px;
       font-weight: 400;
       line-height: 28px;

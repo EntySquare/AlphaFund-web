@@ -9,15 +9,15 @@ const { windowWidth } = useWindowSize();
       <div class="top">
         <div class="top_left">
           <div class="logo">
-            <img src="http://www.alphafound.cc/assets/img/logo.svg" alt="BeWater" />
+            <img src="http://www.alphafound.cc/assets/img/logo.svg" alt="" />
           </div>
           <div class="text" v-if="windowWidth > 824">
             To provide investors with stable returns，<br />
-            Help them achieve long-term
-            financial goals.
+            Help them achieve long-term financial goals.
           </div>
           <div class="text" v-else>
-            To provide investors with stable returns， Help them achieve long-term financial goals.
+            To provide investors with stable returns， Help them achieve
+            long-term financial goals.
           </div>
           <div class="Links">
             <!-- <img src="http://www.alphafound.cc/assets/img/in.png" alt="" />
@@ -38,17 +38,19 @@ const { windowWidth } = useWindowSize();
             </div>
           </div>
           <div class="nav">
-
-
-            <div  class="navTitle">Explore</div>
+            <div class="navTitle">Explore</div>
             <a href="#Home" class="navText">Home</a>
             <a href="#AboutUs" class="navText">About us</a>
-            <a href="#InvestmentPortfolio" class="navText">Investment Portfolio</a>
+            <a href="#InvestmentPortfolio" class="navText"
+              >Investment Portfolio</a
+            >
             <a href="#Invest" class="navText">Invest</a>
             <a href="#MarketInsights" class="navText">Market Insights</a>
             <a href="#SocialImpact" class="navText">Social Impact</a>
             <a href="#MediaCoverage" class="navText">Media Coverage</a>
-            <a href="#BrillianceCorporation" class="navText">Brilliance Corporation</a>
+            <a href="#BrillianceCorporation" class="navText"
+              >Brilliance Corporation</a
+            >
             <a href="#Advisoryteam" class="navText">Advisory team</a>
             <a href="#IndustryNews" class="navText">industry News</a>
           </div>
@@ -63,58 +65,6 @@ const { windowWidth } = useWindowSize();
       <div class="bottom">版权信息：© 2020 AlphaFund. All rights reserved.</div>
     </div>
   </footer>
-  <!-- <footer class="app_footer">
-    <div class="container">
-      <div class="top">
-        <div class="top_left">
-          <div class="logo">
-            <img src="@/assets/img/logo.svg" alt="BeWater" />
-          </div>
-          <div class="text" v-if="windowWidth > 824">
-            为投资者提供稳健的回报，<br />
-            帮助他们实现长期财务目标。
-          </div>
-          <div class="text" v-else>
-            为投资者提供稳健的回报， 帮助他们实现长期财务目标。
-          </div>
-          <div class="Links">
-            <img src="@/assets/img/in.png" alt="" />
-            <img src="@/assets/img/twi.png" alt="" />
-            <img src="@/assets/img/facebook.png" alt="" />
-          </div>
-        </div>
-        <div class="top_right">
-          <div class="navSpecial">
-            <div class="nav">
-              <div class="navTitle">联系方式</div>
-              <div class="navText">+123-456-7890</div>
-              <div class="navText">info@alphafund.com</div>
-            </div>
-            <div class="nav">
-              <div class="navTitle">地址</div>
-              <div class="navText">公司地址</div>
-            </div>
-          </div>
-          <div class="nav">
-            <div class="navTitle">探索</div>
-            <div class="navText">主页</div>
-            <div class="navText">关于我们</div>
-            <div class="navText">市场见解</div>
-            <div class="navText">团队介绍</div>
-            <div class="navText">社会影响</div>
-            <div class="navText">在线联系表</div>
-          </div>
-          <div class="nav">
-            <div class="navTitle">支持</div>
-            <div class="navText">法律声明</div>
-            <div class="navText">隐私政策</div>
-            <div class="navText">帮助中心</div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom">版权信息：© 2023 AlphaFund. All rights reserved.</div>
-    </div>
-  </footer> -->
 </template>
 
 <style scoped lang="less">
@@ -150,7 +100,7 @@ const { windowWidth } = useWindowSize();
       }
     }
     .text {
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 16px;
       font-weight: 400;
       line-height: 22.4px;
@@ -178,32 +128,51 @@ const { windowWidth } = useWindowSize();
       display: flex;
       flex-direction: column;
       gap: 15px;
-      
+
       .navTitle {
         margin-bottom: 10px;
-        font-family: "Poppins", sans-serif;
+        font-family: Inter, Tahoma, sans-serif;
         font-size: 20px;
         font-weight: 500;
         line-height: 28px;
         text-align: left;
-        color: #FFB566;
+        color: #ffb566;
       }
       .navText {
-        font-family: "Poppins", sans-serif;
+        font-family: Inter, Tahoma, sans-serif;
         font-size: 18px;
         font-weight: 300;
         line-height: 28px;
         text-align: left;
         color: #272f38;
-&:hover{
-color: #ff9633;
-}
+        cursor: pointer;
+
+        position: relative; /* 为 ::after 定位提供参考 */
+        display: inline-block; /* 让下划线宽度跟随文字 */
+        transition: color 0.3s ease-in-out; /* 过渡动画 */
+        &:hover {
+          color: #ff9633;
+        }
+      }
+      .navText::after {
+        content: ""; /* 生成伪元素 */
+        position: absolute;
+        left: 0;
+        bottom: -1px; /* 调整底部位置 */
+        width: 0;
+        height: 1.5px; /* 线的高度 */
+        background-color: #ff96336e; /* 线的颜色 */
+        transition: width 0.3s ease-in-out; /* 过渡动画 */
+      }
+
+      .navText:hover::after {
+        width: 100%; /* 悬停时扩展到100% */
       }
     }
   }
 }
 .bottom {
-  font-family: "Poppins", sans-serif;
+  font-family: Inter, Tahoma, sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;

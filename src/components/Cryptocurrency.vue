@@ -4,10 +4,16 @@
       <!--  Brilliance Corporation Section -->
 
       <div class="title">Invest</div>
-        <div class="text">We invest in iconic founders from the early days of cryptocurrency and beyond, in the form of
-        equity or tokens.</div>
+      <div class="text">
+        We invest in iconic founders from the early days of cryptocurrency and
+        beyond, in the form of equity or tokens.
+      </div>
       <div class="Cryptocurrency_Content">
-        <div class="contentItem" v-for="item in cryptocurrencyData">
+        <div
+          class="contentItem"
+          v-for="item in cryptocurrencyData"
+          :key="item.project"
+        >
           <div class="itemImg"><img :src="item.img" alt="" /></div>
           <div class="itemTitle">{{ item.project }}</div>
           <el-popover
@@ -75,8 +81,8 @@
 </template>
 
 <script lang="ts" setup>
-import { text } from "stream/consumers"
-import { ref } from "vue"
+import { text } from "stream/consumers";
+import { ref } from "vue";
 
 // Team Members
 const cryptocurrencyData = [
@@ -141,7 +147,6 @@ const cryptocurrencyData = [
     text: "The RNDR network is a peer-to-peer GPU computing network that connects creators in need of extra computing power to render scenes with providers who receive RNDR tokens for their GPU capabilities.",
   },
 ];
-
 </script>
 
 <style scoped lang="less">
@@ -155,19 +160,20 @@ const cryptocurrencyData = [
   border-bottom: 1px solid #d9d9d9;
 }
 .title {
-  font-family: "Poppins", sans-serif;
- font-size: 34px;
+  font-family: Inter, Tahoma, sans-serif;
+  font-size: 34px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
   color: #ff9633;
   margin-bottom: 15px;
 }
-.text{
-text-align: center;
-color: #353535;
-font-size: 14px;
+.text {
+  text-align: center;
+  color: #0b0909;
+  font-size: 16px;
   margin-bottom: 100px;
+  font-family: Inter, Tahoma, sans-serif;
 }
 .Cryptocurrency_Content {
   width: 100%;
@@ -188,24 +194,28 @@ font-size: 14px;
     }
     .itemTitle {
       color: #000;
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 18px;
       font-weight: 500;
       padding: 14px 0;
-text-align: center;    }
+      text-align: center;
+    }
     .itemText {
-text-align: center;      color: #353535;
+      cursor: pointer;
 
-      font-family: "Poppins", sans-serif;
+      text-align: center;
+      color: #353535;
+
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 14px;
       letter-spacing: 0.5px; /* 控制字母之间的水平间距 */
       line-height: 20px;
 
-       display: -webkit-box;
-  -webkit-line-clamp: 2; /* 显示两行 */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis; /* 超出部分显示省略号 */
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* 显示两行 */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis; /* 超出部分显示省略号 */
     }
   }
 }
@@ -230,19 +240,23 @@ text-align: center;      color: #353535;
   .title {
     font-size: 25px;
   }
-  .text{
-    margin-bottom: 30px;
-
-}
+  .text {
+    font-size: 15px;
+    margin-bottom: 50px;
+  }
   .Cryptocurrency_Content {
     display: flex;
     flex-direction: column;
     align-items: center;
 
     gap: 20px;
-    row-gap: 20px;
-    .contentItem{
-    width: 100%;}
+    row-gap: 30px;
+    .contentItem {
+      width: 100%;
+      .itemText {
+        font-size: 12px;
+      }
+    }
   }
 }
 
@@ -251,8 +265,6 @@ text-align: center;      color: #353535;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
-  row-gap: 80px;
 
   // 修改 el-table 样式
   ::v-deep(.el-table) {

@@ -8,18 +8,21 @@
         provide support for our investment decisions.
       </div>
       <div class="InvestmentPortfolio_Cards">
-        <div v-for="(content, index) in InvestmentPortfolioContent" :key="index" class="item"
-          :class="{ hovered: hoveredIndex === index }" @mouseover="hoveredIndex = index"
-          @mouseleave="hoveredIndex = -1">
-          <img :src="content.image" :alt="content.title" class="itemimage" />
+        <div
+          v-for="(content, index) in InvestmentPortfolioContent"
+          :key="index"
+          class="item"
+          :class="{ hovered: hoveredIndex === index }"
+          @mouseover="hoveredIndex = index"
+          @mouseleave="hoveredIndex = -1"
+        >
+          <img :src="content.image" class="itemimage" />
           <div class="itemtitle">{{ content.title }}</div>
           <div class="itemcontent" v-html="content.content"></div>
         </div>
       </div>
       <div class="Energy_Container">
         <div class="left_content">
-
-
           <ul>
             <li>Artificial Intelligence: 40%</li>
             <li>Blockchain: 20%</li>
@@ -29,7 +32,15 @@
           </ul>
         </div>
         <div class="right_content">
-          <div style="width: 100%; height: 100%;display: flex;align-items: center;justify-content: center;">
+          <div
+            style="
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
             <!-- 饼图容器 -->
             <v-chart :option="chartOptions" class="chart"></v-chart>
           </div>
@@ -68,7 +79,6 @@
           </div> -->
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -153,7 +163,7 @@ const chartOptions = {
 
 .title {
   font-family: Inter, Tahoma, sans-serif;
- font-size: 34px;
+  font-size: 34px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
@@ -187,6 +197,7 @@ const chartOptions = {
     padding: 10px 0px;
     width: 345px;
     height: 434px;
+    cursor: pointer;
 
     .itemimage {
       width: 100px;
@@ -369,7 +380,7 @@ const chartOptions = {
     }
 
     .percentage-box {
-font-family: Inter, Tahoma, sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 1.5rem;
       font-weight: 600;
       line-height: 29.05px;
@@ -380,7 +391,7 @@ font-family: Inter, Tahoma, sans-serif;
     }
 
     .label {
-font-family: Inter, Tahoma, sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 1.05rem;
       font-weight: 400;
       line-height: 30.04px;
@@ -416,7 +427,6 @@ font-family: Inter, Tahoma, sans-serif;
       flex-direction: column;
       align-items: center;
       margin-top: 100px;
-      margin-bottom: 150px;
 
       .left_content {
         width: 100%;
@@ -556,7 +566,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .percentage-box {
-font-family: Inter, Tahoma, sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(20px, 1vw, 18px);
           font-weight: 600;
           text-align: center;
@@ -567,7 +577,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .label {
-font-family: Inter, Tahoma, sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(13px, 1vw, 16px);
           font-weight: 400;
           text-align: center;
@@ -724,7 +734,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .percentage-box {
-font-family: Inter, Tahoma, sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(16px, 1vw, 16px);
           font-weight: 600;
           text-align: center;
@@ -735,7 +745,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .label {
-font-family: Inter, Tahoma, sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(11px, 1vw, 14px);
           font-weight: 400;
           text-align: center;
@@ -948,7 +958,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .percentage-box {
-font-family: Inter, Tahoma, sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-weight: 600;
           line-height: 18px;
 
@@ -956,7 +966,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .label {
-font-family: Inter, Tahoma, sans-serif;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: 1vw;
           font-weight: 400;
           line-height: 18px;
@@ -965,153 +975,6 @@ font-family: Inter, Tahoma, sans-serif;
         }
       }
     }
-
-    //   .Energy_Container{
-    //     width: 100%;
-    //     display: flex;
-    //     flex: column;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     margin-top: 100px;
-    //     margin-bottom: 200px;
-    //   .left_content{
-    //       width: 100%;
-    //       display: flex;
-    //       text-align: center;
-    //       flex-direction: column;
-    //       padding-left: 20px;
-    //     ul {
-    //       list-style-type: none;
-    //       display: flex;
-    //       text-align: center;
-    //       flex-direction: column;
-    //       justify-content: center;
-    //     }
-    //     li {
-    //     font-family: Inter, Tahoma, sans-serif;    //       font-size: 30px;
-    //       font-weight: 500;
-    //       line-height: 42px;
-    //       text-align: center;
-    //       color: #414141;
-    //       margin-bottom: 50px;
-    //     }
-    //   }
-
-    // .right_content{
-    // width: 100%;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   flex-direction: column;
-    //    position: relative;
-
-    // .pie-chart {
-    //   width:100%;
-    //   height: 100%;
-    //   position: relative;
-    // }
-
-    // .pie-chart img {
-    //   width: 500px;
-    //    height: 500px;
-    //   justify-content: center;
-    //    z-index: 3;
-    // }
-
-    // .rectangular-box-energy {
-    //   width: 120px;
-    //   height: 70px;
-    //   display: flex;
-    //   border-radius: 3px;
-    //   border: 1px solid #CFCFCF;
-    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   position: absolute;
-    //   top:  60px;
-    //   left:  80px;
-    //   z-index: 4;
-
-    // }
-
-    // .rectangular-box-tech {
-    // width: 120px;
-    // height: 70px;
-    //   display: flex;
-    //   border-radius: 3px;
-    //   border: 1px solid #CFCFCF;
-    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   position: absolute;
-    //   top:  60px;
-    //   right: 60px;
-    //   z-index: 4;
-    // }
-
-    // .rectangular-box-ai {
-    // width: 120px;
-    // height: 70px;
-    //   display: flex;
-    //   border-radius: 3px;
-    //   border: 1px solid #CFCFCF;
-    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   position: absolute;
-    //   bottom: 00px;
-    //   right: 270px;
-    //   z-index: 4;
-    // }
-
-    // .leftRectangle{
-    //   width: 100px;
-    //   height: 50px;
-    //   display: flex;
-    //   position: absolute;
-    //   bottom: 330px;
-    //   left: 115px;
-    //   z-index: 2;
-
-    // }
-
-    // .rightRectangle{
-    //  width: 100px;
-    //   height: 50px;
-    //   display: flex;
-    //   position: absolute;
-    //   bottom: 330px;
-    //   right: 120px;
-    //   z-index: 2;
-
-    // }
-    // .downRectangle{
-    //   width: 20px;
-    //   height: 50px;
-    //   display: flex;
-    //   position: absolute;
-    //   bottom: 58px;
-    //   right:  340px;
-    //   z-index: 2;
-
-    // }
-
-    // .percentage-box {
-    // font-size: 16px;
-    // font-weight: 700;
-    // color: #414141;
-    // }
-
-    // .label {
-    // font-size: 14px;
-    // font-weight: 500;
-    // color: #414141;
-    // }
-    //   }
-    // }
   }
 }
 
@@ -1319,7 +1182,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .percentage-box {
-          font-family: Inter;
+          font-family: Inter, Tahoma, sans-serif;
           font-weight: 600;
           font-size: 2vw;
           line-height: 18px;
@@ -1327,7 +1190,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .label {
-          font-family: Iowan Old Style;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: 1.2vw;
           font-weight: 400;
           line-height: 10px;
@@ -1336,156 +1199,8 @@ font-family: Inter, Tahoma, sans-serif;
         }
       }
     }
-
-    //   .Energy_Container{
-    //     width: 100%;
-    //     display: flex;
-    //     flex: column;
-    //     flex-direction: column;
-    //     align-items: center;
-    //     margin-top: 100px;
-    //     margin-bottom: 200px;
-    //   .left_content{
-    //       width: 100%;
-    //       display: flex;
-    //       text-align: center;
-    //       flex-direction: column;
-    //       padding-left: 20px;
-    //     ul {
-    //       list-style-type: none;
-    //       display: flex;
-    //       text-align: center;
-    //       flex-direction: column;
-    //       justify-content: center;
-    //     }
-    //     li {
-    //     font-family: Inter, Tahoma, sans-serif;    //       font-size: 30px;
-    //       font-weight: 500;
-    //       line-height: 42px;
-    //       text-align: center;
-    //       color: #414141;
-    //       margin-bottom: 50px;
-    //     }
-    //   }
-
-    // .right_content{
-    // width: 100%;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   flex-direction: column;
-    //    position: relative;
-
-    // .pie-chart {
-    //   width:100%;
-    //   height: 100%;
-    //   position: relative;
-    // }
-
-    // .pie-chart img {
-    //   width: 500px;
-    //    height: 500px;
-    //   justify-content: center;
-    //    z-index: 3;
-    // }
-
-    // .rectangular-box-energy {
-    //   width: 120px;
-    //   height: 70px;
-    //   display: flex;
-    //   border-radius: 3px;
-    //   border: 1px solid #CFCFCF;
-    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   position: absolute;
-    //   top:  60px;
-    //   left:  80px;
-    //   z-index: 4;
-
-    // }
-
-    // .rectangular-box-tech {
-    // width: 120px;
-    // height: 70px;
-    //   display: flex;
-    //   border-radius: 3px;
-    //   border: 1px solid #CFCFCF;
-    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   position: absolute;
-    //   top:  60px;
-    //   right: 60px;
-    //   z-index: 4;
-    // }
-
-    // .rectangular-box-ai {
-    // width: 120px;
-    // height: 70px;
-    //   display: flex;
-    //   border-radius: 3px;
-    //   border: 1px solid #CFCFCF;
-    // font-family: Inter, Tahoma, sans-serif;    //   background-color: white;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-    //   position: absolute;
-    //   bottom: 00px;
-    //   right: 270px;
-    //   z-index: 4;
-    // }
-
-    // .leftRectangle{
-    //   width: 100px;
-    //   height: 50px;
-    //   display: flex;
-    //   position: absolute;
-    //   bottom: 330px;
-    //   left: 115px;
-    //   z-index: 2;
-
-    // }
-
-    // .rightRectangle{
-    //  width: 100px;
-    //   height: 50px;
-    //   display: flex;
-    //   position: absolute;
-    //   bottom: 330px;
-    //   right: 120px;
-    //   z-index: 2;
-
-    // }
-    // .downRectangle{
-    //   width: 20px;
-    //   height: 50px;
-    //   display: flex;
-    //   position: absolute;
-    //   bottom: 58px;
-    //   right:  340px;
-    //   z-index: 2;
-
-    // }
-
-    // .percentage-box {
-    // font-size: 16px;
-    // font-weight: 700;
-    // color: #414141;
-    // }
-
-    // .label {
-    // font-size: 14px;
-    // font-weight: 500;
-    // color: #414141;
-    // }
-    //   }
-    // }
   }
 }
-
 
 @media (max-width: 456px) {
   .InvestmentPortfolio {
@@ -1689,7 +1404,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .percentage-box {
-          font-family: Inter;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(10px, 1vw, 12px);
           font-weight: 600;
 
@@ -1698,7 +1413,7 @@ font-family: Inter, Tahoma, sans-serif;
         }
 
         .label {
-          font-family: Iowan Old Style;
+          font-family: Inter, Tahoma, sans-serif;
           font-size: clamp(5px, 1vw, 8px);
           font-weight: 400;
           line-height: 10px;

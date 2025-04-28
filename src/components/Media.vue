@@ -5,21 +5,28 @@
 
       <div class="title">Media Coverage</div>
       <div class="Media_Content">
-        <div v-for="(member, index) in teamMembers" :key="index" class="item" @click="clickURL(member.url)">
+        <div
+          v-for="(member, index) in teamMembers"
+          :key="index"
+          class="item"
+          @click="clickURL(member.url)"
+        >
           <LINE lineWidth="810px">
             <template #image>
               <img :src="member.image" class="itemimage" />
             </template>
             <!-- 文字插槽 -->
             <template #text>
-              <el-popover v-if="index === 4" placement="bottom" :width="310" trigger="hover"
-                :content="member.title">
+              <el-popover
+                placement="bottom"
+                :width="windowWidth > 890 ? '360px' : '260px'"
+                trigger="hover"
+                :content="member.title"
+              >
                 <template #reference>
                   <div class="itemname" v-html="member.title"></div>
-
                 </template>
               </el-popover>
-              <div class="itemname" v-else v-html="member.title"></div>
             </template>
           </LINE>
           <!-- <img :src="member.image" class="itemimage" />
@@ -33,49 +40,49 @@
   <script lang="ts" setup>
 import { ref } from "vue";
 
+import { useWindowSize } from "@/utils/useWindowSize";
+const { windowWidth } = useWindowSize();
 // Team Members
 const teamMembers = ref([
   {
     image: "http://www.alphafound.cc/assets/img/me1.png",
-    url:'http://financial.yxwbd.top/news/1952.html',
-    title:
-      "Brilliance Team Leading the Wave of AI Healthcare Investments",
+    url: "http://financial.yxwbd.top/news/1952.html",
+    title: "Brilliance Team Leading the Wave of AI Healthcare Investments",
   },
   {
     image: "http://www.alphafound.cc/assets/img/me2.png",
-    url:'http://www.globalpapertimes.com/news/2098.html',
+    url: "http://www.globalpapertimes.com/news/2098.html",
     title:
       "A Clean Energy Model from a Global Investment Perspective: The Rise of Northvolt",
   },
   {
     image: "http://www.alphafound.cc/assets/img/me3.png",
-    url:'http://www.hlitechnology.com/news/1777.html',
+    url: "http://www.hlitechnology.com/news/1777.html",
     title:
       "Brilliance Team Forms Partnership with Renowned Research Institution ETH Zurich",
   },
   {
     image: "http://www.alphafound.cc/assets/img/me4.png",
-    url:'http://www.newstrackings.cc/news/295.html',
+    url: "http://www.newstrackings.cc/news/295.html",
     title:
       "A New Milestone in Education Equity: Brilliance Team Invests in Digital Learning",
   },
   {
     image: "http://www.alphafound.cc/assets/img/me5.png",
-    url:'http://markets.zmssw.cc/news/2040.html',
+    url: "http://markets.zmssw.cc/news/2040.html",
     title:
       "The New Era of Autonomous Driving: Brilliance Team Accelerates RoadAI's Technological Breakthrough",
   },
   {
     image: "http://www.alphafound.cc/assets/img/me6.png",
-    url:'http://www.netitimes.com/news/1912.html',
+    url: "http://www.netitimes.com/news/1912.html",
     title:
       "Brilliance Team Partners with Anthropic to Advance Responsible AI Development",
   },
 ]);
-const clickURL = (url:string)=>{
-   window.open(url, '_blank'); // Open URL in a new tab
-
-}
+const clickURL = (url: string) => {
+  window.open(url, "_blank"); // Open URL in a new tab
+};
 </script>
   
   <style scoped lang="less">
@@ -89,8 +96,8 @@ const clickURL = (url:string)=>{
   border-bottom: 1px solid #d9d9d9;
 }
 .title {
-  font-family: "Poppins", sans-serif;
-font-size: 34px;
+  font-family: Inter, Tahoma, sans-serif;
+  font-size: 34px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
@@ -112,14 +119,14 @@ font-size: 34px;
     .itemname {
       margin-top: 30px;
       max-width: 360px;
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 16px;
       font-weight: 400;
       line-height: 28px;
       text-align: left;
       color: #000;
 
-       display: -webkit-box;
+      display: -webkit-box;
       -webkit-line-clamp: 2;
       /* 显示两行 */
       -webkit-box-orient: vertical;

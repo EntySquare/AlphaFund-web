@@ -20,7 +20,8 @@
 </template>
 <style scoped lang='less'>
 .home_view {
-  background-color: #f6f6f6; // min-height: calc(100vh - 80px - 100px);
+  background-color: #f6f6f6;
+   // min-height: calc(100vh - 80px - 100px);
   width: 100%;
   padding-top: 50px;
   .container {

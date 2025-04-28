@@ -35,7 +35,7 @@ const handleMouseLeave = () => {
           width: props.imageWidth || '100%',
           height: props.imageHeight || 'auto',
         }"
-        alt="dynamic-image"
+        alt=""
       />
     </div>
     <!-- 文字区域 -->

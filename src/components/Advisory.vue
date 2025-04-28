@@ -6,7 +6,7 @@
       <div class="title">Advisory team</div>
       <div class="AlphaFund_Content">
         <div v-for="(member, index) in teamMembers" :key="index" class="item">
-          <img :src="member.image" :alt="member.name" class="itemimage" />
+          <img :src="member.image" alt="" class="itemimage" />
           <div class="itemname">{{ member.name }}</div>
           <div class="itemposition">{{ member.position }}</div>
         </div>
@@ -24,8 +24,6 @@ const teamMembers = ref([
     image: "http://www.alphafound.cc/assets/img/ad1.png",
     name: "이진섭",
     position: "Digital Asset Venture Capital Advisor",
- 
-
   },
   {
     image: "http://www.alphafound.cc/assets/img/ad2.png",
@@ -42,7 +40,6 @@ const teamMembers = ref([
     name: "Maria Sanchez",
     position: "International Investment & Risk Management Consultant",
   },
- 
 ]);
 </script>
 
@@ -56,8 +53,8 @@ const teamMembers = ref([
   border-bottom: 1px solid #d9d9d9;
 }
 .title {
-  font-family: "Poppins", sans-serif;
-font-size: 34px;
+  font-family: Inter, Tahoma, sans-serif;
+  font-size: 34px;
   font-weight: 500;
   line-height: 56px;
   text-align: center;
@@ -92,9 +89,9 @@ font-size: 34px;
       margin-bottom: 30px;
     }
     .itemname {
-          max-width: 200px;
+      max-width: 200px;
 
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 20px;
       font-weight: 600;
       line-height: 42px;
@@ -104,7 +101,7 @@ font-size: 34px;
     }
     .itemposition {
       max-width: 200px;
-      font-family: "Poppins", sans-serif;
+      font-family: Inter, Tahoma, sans-serif;
       font-size: 14px;
       font-weight: 500;
       line-height: 28px;
@@ -128,62 +125,60 @@ font-size: 34px;
   .AlphaFund {
     padding: 0 50px;
     .AlphaFund_Content {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  row-gap: 20px;
-  .item {
-    border-radius: 20px;
-    border: 2px solid #eeeeee;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 25px 30px 25px;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
-    }
-    .itemimage {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      margin-bottom: 30px;
-    }
-    .itemname {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      row-gap: 20px;
+      .item {
+        border-radius: 20px;
+        border: 2px solid #eeeeee;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 25px 30px 25px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2);
+        }
+        .itemimage {
+          width: 180px;
+          height: 180px;
+          border-radius: 50%;
+          margin-bottom: 30px;
+        }
+        .itemname {
           max-width: 170px;
-      font-size: 20px;
-      margin-bottom: 22px;
+          font-size: 20px;
+          margin-bottom: 22px;
+        }
+        .itemposition {
+          max-width: 170px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
     }
-    .itemposition {
-      max-width: 170px;
-      font-size: 14px;
-      font-weight: 500;
-    }
-  }
-}
   }
 }
 @media (max-width: 1096px) {
   .AlphaFund {
-
     .AlphaFund_Content {
+      .item {
+        flex: 0 0 calc(50% - 10px); /* 每个项占据一半的宽度，减去间距 */
 
-  .item {
-   flex: 0 0 calc(50% - 10px); /* 每个项占据一半的宽度，减去间距 */
-   
-    .itemname {
+        .itemname {
           max-width: 100%;
+        }
+        .itemposition {
+          max-width: 100%;
+        }
+      }
     }
-    .itemposition {
-      max-width: 100%;
-    }
-  }
-}
   }
 }
 @media (max-width: 824px) {
